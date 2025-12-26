@@ -1,0 +1,48 @@
+import { Product } from "@/types/product";
+
+export const recommendedProducts: Product[] = [
+  {
+    id: "101",
+    title: "High-Strength Cement Blocks – Durable, Weather-Resistant",
+    image: "/images/sample1.jpg",
+    price: 1456,
+    originalPrice: 1856,
+    discountPercent: 20,
+    rating: 4.3,
+    minOrderQty: 10,
+    slug: "cement-block-101",
+  },
+  {
+    id: "102",
+    title: "Premium Grey Solid Blocks",
+    image: "/images/sample2.jpg",
+    price: 1320,
+    originalPrice: 1650,
+    discountPercent: 18,
+    rating: 4.5,
+    minOrderQty: 8,
+    slug: "cement-block-102",
+  },
+  {
+    id: "103",
+    title: "Weather-Resistant AAC Blocks",
+    image: "/images/sample3.jpg",
+    price: 1500,
+    originalPrice: 1800,
+    discountPercent: 16,
+    rating: 4.4,
+    minOrderQty: 12,
+    slug: "cement-block-103",
+  },
+  {
+    id: "104",
+    title: "Construction Grade Concrete Blocks",
+    image: "/images/sample4.jpg",
+    price: 1380,
+    originalPrice: 1700,
+    discountPercent: 15,
+    rating: 4.2,
+    minOrderQty: 15,
+    slug: "cement-block-104",
+  },
+];
