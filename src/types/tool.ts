@@ -1,4 +1,3 @@
-// src/types/tool.ts
 import { ReactNode } from "react";
 
 export interface Tool {
@@ -6,5 +5,6 @@ export interface Tool {
   title: string;
   subtitle: string;
   description: string;
-  icon: ReactNode; // 👈 VERY IMPORTANT
+  icon: ReactNode;
+  href?: string;
 }

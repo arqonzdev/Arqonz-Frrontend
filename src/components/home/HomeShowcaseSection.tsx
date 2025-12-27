@@ -1,3 +1,5 @@
+// src/components/home/HomeShowcaseSection.tsx
+
 import RecentlyViewed from "./RecentlyViewed";
 import FurnitureEssentials from "./FurnitureEssentials";
 import SmartSpeedBanner from "./SmartSpeedBanner";

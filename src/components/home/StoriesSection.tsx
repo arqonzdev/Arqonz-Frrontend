@@ -11,11 +11,11 @@ export default function StoriesSection() {
   return (
     <section className="bg-gray-50 py-10">
       <div className="mx-auto max-w-7xl px-6">
-        {/* ================= HEADER ================= */}
+
+        {/* HEADER */}
         <div className="mb-12 flex items-center justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
-            See Latest{" "}
-            <span className="text-teal-600">Stories</span>
+            See Latest <span className="text-teal-600">Stories</span>
           </h2>
 
           <Link
@@ -26,25 +26,25 @@ export default function StoriesSection() {
           </Link>
         </div>
 
-        {/* ================= GRID ================= */}
+        {/* GRID */}
         <div className="grid gap-10 md:grid-cols-2">
-          {/* ========== LEFT : FEATURED STORY ========== */}
+
+          {/* FEATURED */}
           <Link
             href={featured.href}
             className="group relative rounded-3xl bg-white p-4 shadow-sm transition hover:shadow-md"
           >
-            {/* Image */}
             <div className="relative overflow-hidden rounded-2xl">
               <Image
                 src={featured.image}
                 alt={featured.title}
                 width={800}
                 height={520}
+                sizes="(max-width:768px) 100vw, 50vw"
                 className="h-[420px] w-full object-cover transition group-hover:scale-105"
               />
             </div>
 
-            {/* Content */}
             <div className="mt-6">
               <span className="inline-block rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-700">
                 {featured.category}
@@ -59,13 +59,12 @@ export default function StoriesSection() {
               </p>
             </div>
 
-            {/* Arrow */}
             <div className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-black text-white">
               ↗
             </div>
           </Link>
 
-          {/* ========== RIGHT : STACKED STORIES ========== */}
+          {/* LIST */}
           <div className="flex flex-col gap-6">
             {others.map((story) => (
               <Link
@@ -73,17 +72,16 @@ export default function StoriesSection() {
                 href={story.href}
                 className="group relative flex gap-5 rounded-2xl bg-white p-4 shadow-sm transition hover:shadow-md"
               >
-                {/* Thumbnail */}
                 <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-xl">
                   <Image
                     src={story.image}
                     alt={story.title}
                     fill
+                    sizes="120px"
                     className="object-cover transition group-hover:scale-105"
                   />
                 </div>
 
-                {/* Text */}
                 <div className="flex-1">
                   <span className="inline-block rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-700">
                     {story.category}
@@ -98,13 +96,13 @@ export default function StoriesSection() {
                   </p>
                 </div>
 
-                {/* Arrow */}
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black text-white">
                   ↗
                 </div>
               </Link>
             ))}
           </div>
+
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Search, User, Heart, Menu } from "lucide-react";
+import { Search, User, Heart, Menu, X } from "lucide-react";
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import MegaMenu from "../categories/MegaMenu";
@@ -10,19 +10,19 @@ import MegaMenu from "../categories/MegaMenu";
 const navLinks = [
   { label: "Home", href:"/" },
   { label: "Products", href: "/products" },
-  { label: "Professionals", href: "#" },
-  { label: "Properties", href: "#" },
-  { label: "Projects", href: "#" },
-  { label: "Design IQ", href: "#" },
-  { label: "Tools", href: "#" },
-  { label: "Deal Desk", href: "#" },
-  { label: "Blog", href: "#" },
+  { label: "Professionals", href: "/professionals" },
+  { label: "Properties", href: "/properties" },
+  { label: "Projects", href: "/projects" },
+  { label: "Design IQ", href: "/design-iq" },
+  { label: "Tools", href: "/tools" },
+  { label: "Deal Desk", href: "/deal-desk" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
-  const timer = useRef<NodeJS.Timeout | null>(null);
-
+  const [mobileNav, setMobileNav] = useState(false);
+  const timer = useRef(null);
   const router = useRouter();
   const [query, setQuery] = useState("");
 
@@ -35,7 +35,7 @@ export default function Navbar() {
     timer.current = setTimeout(() => setOpenMenu(false), 120);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e) => {
     e.preventDefault();
     if (!query.trim()) return;
     router.push(`/products/search?q=${encodeURIComponent(query)}`);
@@ -43,27 +43,40 @@ export default function Navbar() {
 
   return (
     <header className="relative z-50">
-      <div className="bg-gradient-to-r from-[#006a66] to-[#00a89d] py-6">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-white rounded-2xl shadow-xl px-6 py-4">
+      <div className="bg-gradient-to-r from-[#006a66] to-[#00a89d] py-4 sm:py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-            <div className="flex items-center justify-between gap-8">
+          <div className="bg-white rounded-2xl shadow-xl px-4 py-3 sm:px-6 sm:py-4">
+
+            {/* TOP BAR */}
+            <div className="flex items-center justify-between gap-4">
+
+              {/* MOBILE MENU BTN */}
+              <button 
+                className="sm:hidden"
+                onClick={() => setMobileNav(true)}
+              >
+                <Menu />
+              </button>
 
               {/* LOGO */}
-              <Link href="/" className="flex items-center gap-3">
+              <Link href="/" className="flex items-center gap-2 sm:gap-3">
                 <Image src="/logo.svg" alt="Logo" width={36} height={36} />
                 <div>
-                  <p className="text-lg font-semibold tracking-wide">
+                  <p className="text-base sm:text-lg font-semibold tracking-wide">
                     ARQONZ.COM
                   </p>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-[10px] sm:text-xs text-gray-500">
                     Construction Marketplace
                   </p>
                 </div>
               </Link>
 
-              {/* SEARCH BAR */}
-              <form onSubmit={handleSearch} className="relative flex-1 max-w-3xl">
+              {/* SEARCH (MOBILE FULL WIDTH BELOW) */}
+              <form
+                onSubmit={handleSearch}
+                className="hidden sm:flex relative flex-1 max-w-3xl"
+              >
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                 <input
                   value={query}
@@ -79,22 +92,34 @@ export default function Navbar() {
                 </button>
               </form>
 
-              {/* ICONS + AUTH */}
-              <div className="flex items-center gap-5">
+              {/* ICONS */}
+              <div className="flex items-center gap-4">
                 <User className="text-gray-700" />
                 <Heart className="text-gray-700" />
 
                 <Link
                   href="/login"
-                  className="bg-gray-900 text-white rounded-full px-5 py-2 text-sm font-medium"
+                  className="hidden sm:block bg-gray-900 text-white rounded-full px-5 py-2 text-sm font-medium"
                 >
                   Sign in
                 </Link>
               </div>
             </div>
 
-            {/* NAV */}
-            <div className="mt-4 border-t pt-3 flex items-center justify-between">
+            {/* MOBILE SEARCH */}
+            <form onSubmit={handleSearch} className="mt-3 sm:hidden relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search anything..."
+                className="w-full rounded-full border border-gray-200 py-3 pl-11 pr-5 text-sm outline-none focus:border-teal-600"
+              />
+            </form>
+
+            {/* DESKTOP NAV */}
+            <div className="hidden sm:flex mt-4 border-t pt-3 items-center justify-between">
+
               <div className="flex items-center gap-6 text-sm">
 
                 <div
@@ -104,10 +129,11 @@ export default function Navbar() {
                 >
                   <Menu className="h-4 w-4" />
                   All Categories
-                  <MegaMenu open={openMenu} />
                 </div>
 
-                {navLinks.map((link) => (
+                <MegaMenu open={openMenu} />
+
+                {navLinks.map(link => (
                   <Link key={link.label} href={link.href}>
                     {link.label}
                   </Link>
@@ -122,6 +148,36 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+
+      {/* MOBILE NAV PANEL */}
+      {mobileNav && (
+        <div className="fixed inset-0 bg-black/40 z-50 sm:hidden">
+          <div className="bg-white w-72 h-full p-5">
+
+            <div className="flex justify-between items-center mb-6">
+              <p className="font-semibold">Menu</p>
+              <button onClick={() => setMobileNav(false)}>
+                <X />
+              </button>
+            </div>
+
+            <nav className="flex flex-col gap-4 text-sm">
+              {navLinks.map(link => (
+                <Link 
+                  key={link.label} 
+                  href={link.href}
+                  onClick={() => setMobileNav(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+
+          </div>
+        </div>
+      )}
+
     </header>
   );
 }

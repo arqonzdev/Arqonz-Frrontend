@@ -13,6 +13,7 @@ export default function PropertyHubSection() {
             <span className="text-xs font-semibold text-teal-700">
               Real Estate
             </span>
+
             <p className="mt-3 text-sm text-gray-700 leading-relaxed">
               Find the perfect place for buy, sell, and rent verified
               properties with real-time updates and trusted builders.
@@ -21,22 +22,23 @@ export default function PropertyHubSection() {
 
           <div className="mt-6 flex items-center gap-3">
             <div className="flex -space-x-2">
-              {[1,2,3,4].map(i => (
+              {[1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
                   className="h-8 w-8 rounded-full bg-gray-300 border-2 border-white"
                 />
               ))}
             </div>
-                {/* Schedule Demo */}
-          <Link href="/demo" className="flex-1">
-            <button className="ml-auto rounded-lg bg-teal-700 px-4 py-2 text-xs font-semibold text-white">
-              Schedule a Demo
-            </button>
-          </Link>
+
+            {/* Schedule Demo */}
+            <Link href="/demo" className="flex-1">
+              <button className="ml-auto rounded-lg bg-teal-700 px-4 py-2 text-xs font-semibold text-white">
+                Schedule a Demo
+              </button>
+            </Link>
           </div>
         </div>
-                                                
+
         {/* CENTER */}
         <div className="grid grid-cols-2 grid-rows-2 gap-4">
           {propertyHubItems.map((item) => (
@@ -50,9 +52,12 @@ export default function PropertyHubSection() {
                 src={item.image}
                 alt={item.title}
                 fill
+                sizes="(max-width: 1024px) 50vw, 400px"
                 className="object-cover"
               />
+
               <div className="absolute inset-0 bg-black/30" />
+
               <span className="absolute bottom-3 left-3 text-sm font-semibold text-white">
                 {item.title} →
               </span>
@@ -66,18 +71,19 @@ export default function PropertyHubSection() {
             <h3 className="text-lg font-semibold text-gray-900">
               Explore <span className="text-teal-700">Property Hub</span>
             </h3>
+
             <p className="mt-3 text-sm text-gray-600">
               Power your search with Arqonz—find properties, track construction
               projects, and access verified industry professionals effortlessly.
             </p>
           </div>
 
-          <a
-            href="#"
+          <Link
+            href="/properties"
             className="mt-6 text-sm font-semibold text-teal-700"
           >
             Explore All →
-          </a>
+          </Link>
         </div>
 
       </div>

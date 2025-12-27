@@ -7,15 +7,15 @@ export default function TestimonialsSection() {
   return (
     <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6 text-center">
+
         {/* Heading */}
-        <h2 className="text-3xl font-semibold text-gray-900 bold">
+        <h2 className="text-3xl font-semibold text-gray-900">
           What our <span className="text-teal-600">Customers</span> say
         </h2>
 
         <p className="mx-auto mt-4 max-w-3xl text-sm text-gray-800 leading-relaxed">
           Chosen by professionals who value clarity, speed, and reliability.
-          Here what customers say after using Arqonz across real construction
-          workflows
+          Hear what customers say after using Arqonz across real construction workflows.
         </p>
 
         {/* Cards */}
@@ -28,13 +28,14 @@ export default function TestimonialsSection() {
         {/* Bottom Link */}
         <div className="mt-14">
           <a
-            href="#"
+            href="/reviews"
             className="inline-flex items-center gap-2 text-sm font-medium text-teal-700 hover:underline"
           >
             See all reviews by our customers
             <span className="text-lg">↗</span>
           </a>
         </div>
+
       </div>
     </section>
   );
@@ -69,19 +70,25 @@ function VideoCard({
 
   return (
     <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
+
       {/* Video */}
       <video
         ref={videoRef}
         poster={poster}
+        src={video}
         className="h-[420px] w-full object-cover"
       />
 
+      {/* Overlay for readability */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+
       {/* Play / Pause Button */}
       <button
+        aria-label="Toggle video play"
         onClick={toggleVideo}
         className="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow"
       >
-        {playing ? "❚❚" : "▶"}
+        {playing ? "⏸" : "▶"}
       </button>
 
       {/* Name */}
@@ -89,6 +96,7 @@ function VideoCard({
         <p className="text-sm font-semibold text-white">{name}</p>
         <p className="text-xs text-white/80">{role}</p>
       </div>
+
     </div>
   );
 }

@@ -2,78 +2,75 @@
 
 import Image from "next/image";
 import Link from "next/link";
-// import HowItWorksCard from "./HowItWorksCard";
 import { howItWorksSteps } from "@/data/howItWorks";
 
 const pros = [
-  {
-    id: "architect",
-    title: "Architects",
-    image: "/images/pros/architect.jpg",
-  },
-  {
-    id: "interior",
-    title: "Interior Designers",
-    image: "/images/pros/interior.jpg",
-  },
-  {
-    id: "engineer",
-    title: "Engineers",
-    image: "/images/pros/engineer.jpg",
-  },
+  { id: "architect", title: "Architects", image: "/images/pros/architect.jpg" },
+  { id: "interior", title: "Interior Designers", image: "/images/pros/interior.jpg" },
+  { id: "engineer", title: "Engineers", image: "/images/pros/engineer.jpg" },
 ];
 
 export default function MeetTheProsSection() {
   return (
-    <section className="py-10 bg-[#FFF4EA]">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="bg-[#FFF4EA] py-12">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
 
-        {/* LEFT SIDE – Meet the Pros */}
+        {/* LEFT SIDE */}
         <div>
           <h2 className="text-3xl font-semibold mb-1">
             Meet the <span className="text-teal-600">Pros</span>
           </h2>
-          <p className="text-gray-600 mb-8">behind the work</p>
 
-          <div className="flex gap-4">
+          <p className="text-gray-600 mb-8 text-sm">behind the work</p>
+
+          {/* --- 3 Cards in ONE Row --- */}
+          <div className="grid grid-cols-3 gap-4">
             {pros.map((pro) => (
               <div
                 key={pro.id}
-                className="relative w-[220px] h-[300px] rounded-2xl overflow-hidden shadow-lg"
+                className="relative rounded-2xl overflow-hidden shadow-md bg-white"
               >
                 <Image
                   src={pro.image}
                   alt={pro.title}
-                  fill
-                  className="object-cover"
+                  width={400}
+                  height={500}
+                  className="h-64 w-full object-cover"
                 />
 
-                <div className="absolute bottom-0 left-0 right-0 bg-black/55 p-4">
-                  <p className="text-white font-medium">
-                    {pro.title}
-                  </p>
+                <div className="bg-black/60 text-white p-3 text-sm font-medium">
+                  {pro.title}
                 </div>
               </div>
             ))}
-          </div>            
+          </div>
         </div>
 
-        {/* RIGHT SIDE – How it Works */}
+        {/* RIGHT SIDE */}
         <div>
           <h3 className="text-2xl font-semibold mb-2">
             Ask Once, Get Several Quotes
           </h3>
-          <p className="text-gray-600 mb-6">How it works?</p>
 
-          {/* <div className="grid gap-4">
-            {howItWorksSteps.map((step) => (
-              // <HowItWorksCard key={step.step} item={step} />
+          <p className="text-gray-600 text-sm mb-6">
+            How it works?
+          </p>
+
+          {/* --- Number Steps --- */}
+          <ol className="space-y-4 text-sm text-gray-700">
+            {howItWorksSteps.map(step => (
+              <li key={step.stepNumber} className="flex gap-3">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-teal-700 text-white text-xs">
+                  {step.stepNumber}
+                </span>
+                {step.description}
+              </li>
             ))}
-          </div> */}
+          </ol>
 
-              {/* Schedule Demo */}
-          <Link href="/demo" className="flex-1">
-            <button className="mt-8 inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-white hover:bg-teal-700">
+          {/* Button */}
+          <Link href="/demo">
+            <button className="mt-8 rounded-lg bg-teal-700 px-6 py-3 text-white text-sm hover:bg-teal-800">
               Schedule a Demo
             </button>
           </Link>

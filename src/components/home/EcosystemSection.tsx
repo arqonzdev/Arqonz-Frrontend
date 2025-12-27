@@ -1,10 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import { ecosystemItems } from "@/data/ecosystem";
 import EcosystemCard from "./EcosystemCard";
 
 export default function EcosystemSection() {
+  // TODO: later load from API instead of static data
+  // const { data: ecosystemItems } = useQuery(...)
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-10">
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
         {/* LEFT */}
@@ -20,6 +26,9 @@ export default function EcosystemSection() {
           <div className="mt-6 grid grid-cols-2 gap-4">
             {ecosystemItems.map((item) => (
               <EcosystemCard key={item.id} item={item} />
+
+              // TODO: later link to ecosystem page
+              // <Link href={`/ecosystem/${item.slug}`}>
             ))}
           </div>
         </div>

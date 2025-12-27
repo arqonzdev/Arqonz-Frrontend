@@ -9,10 +9,12 @@ export default function NewsletterSection() {
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
+
           {/* Heading */}
           <h2 className="text-2xl font-semibold text-gray-900">
             NEWSLETTER
           </h2>
+
           <p className="mt-4 text-base text-gray-600">
             Subscribe to receive news and product emails and more from our team
           </p>
@@ -26,8 +28,12 @@ export default function NewsletterSection() {
               type="email"
               placeholder="Enter your email address*"
               className="flex-1"
+              required
             />
-            <Button type="submit">Sign Up</Button>
+
+            <Button type="submit">
+              Sign Up
+            </Button>
           </form>
         </div>
       </div>

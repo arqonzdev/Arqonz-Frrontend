@@ -6,9 +6,9 @@ import ToolCategoryList from "./ToolCategoryList";
 import ToolProductCard from "./ToolProductCard";
 
 export default function ToolsMarketplaceSection() {
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef(null);
 
-  const scroll = (dir: "left" | "right") => {
+  const scroll = (dir) => {
     if (!sliderRef.current) return;
     sliderRef.current.scrollBy({
       left: dir === "left" ? -260 : 260,
@@ -17,38 +17,47 @@ export default function ToolsMarketplaceSection() {
   };
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-8">
-      <div className="flex gap-6">
-        {/* LEFT */}
-        <ToolCategoryList />
+    <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8">
 
-        {/* CENTER + RIGHT */}
+      {/* MOBILE CATEGORY SCROLLER */}
+      <div className="sm:hidden mb-5">
+        <div className="flex gap-3 overflow-x-auto scrollbar-hide">
+          <ToolCategoryList mobile />
+        </div>
+      </div>
+
+      <div className="flex gap-6">
+
+        {/* DESKTOP CATEGORY LIST */}
+        <div className="hidden sm:block w-64 shrink-0">
+          <ToolCategoryList />
+        </div>
+
+        {/* SLIDER */}
         <div className="relative flex-1">
-          {/* Left Arrow */}
+
+          {/* LEFT ARROW (HIDDEN ON MOBILE) */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow"
+            className="hidden sm:flex absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow"
           >
             ‹
           </button>
 
-          {/* Slider */}
+          {/* PRODUCT SLIDER */}
           <div
             ref={sliderRef}
-            className="flex gap-4 overflow-x-auto px-8 scrollbar-hide"
+            className="flex gap-4 overflow-x-auto scrollbar-hide px-1 sm:px-8"
           >
             {toolsProducts.map((product) => (
-              <ToolProductCard
-                key={product.id}
-                product={product}
-              />
+              <ToolProductCard key={product.id} product={product} />
             ))}
           </div>
 
-          {/* Right Arrow */}
+          {/* RIGHT ARROW (HIDDEN ON MOBILE) */}
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow"
+            className="hidden sm:flex absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow"
           >
             ›
           </button>

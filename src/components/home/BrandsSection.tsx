@@ -9,6 +9,9 @@ import BrandLogo from "./BrandLogo";
 export default function BrandsSection() {
   const sliderRef = useRef<HTMLDivElement>(null);
 
+  // TODO: later replace with API loaded brands if needed
+  // const { data: brands } = useQuery(...)
+
   const scrollLeft = () => {
     sliderRef.current?.scrollBy({
       left: -300,
@@ -35,6 +38,7 @@ export default function BrandsSection() {
             <h3 className="text-3xl font-semibold text-teal-700">
               {brandsIntro.title}
             </h3>
+
             <p className="mt-2 text-gray-600">
               {brandsIntro.subtitle}
             </p>
@@ -58,6 +62,11 @@ export default function BrandsSection() {
             >
               {brands.map((brand) => (
                 <BrandLogo key={brand.id} brand={brand} />
+
+                // TODO: later:
+                // <Link href={`/brands/${brand.slug}`}>
+                //   <BrandLogo ... />
+                // </Link>
               ))}
             </div>
 

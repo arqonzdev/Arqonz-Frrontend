@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function LeadCaptureCard() {
   return (
     <div className="overflow-hidden rounded-[28px] bg-[#F7E3D6] shadow-xl">
-      
+
       {/* Top black strip */}
       <div className="bg-black px-6 py-3 text-sm font-normal text-white">
         Please provide a detailed enquiry so that we can assist your specific needs
@@ -13,7 +13,7 @@ export default function LeadCaptureCard() {
 
       {/* Body */}
       <div className="px-7 py-6">
-        
+
         {/* Header */}
         <div className="mb-6 flex items-center justify-between">
           <div>
@@ -48,7 +48,10 @@ export default function LeadCaptureCard() {
                 placeholder="Enter your mail"
                 className="flex-1 rounded-xl border border-gray-400 bg-[#F7E3D6] px-4 py-3 text-sm outline-none placeholder:text-gray-600 focus:border-teal-700"
               />
-              <button className="rounded-xl bg-teal-800 px-6 py-3 text-sm font-medium text-white">
+              <button
+                type="button"
+                className="rounded-xl bg-teal-800 px-6 py-3 text-sm font-medium text-white"
+              >
                 Verify
               </button>
             </div>
@@ -68,7 +71,10 @@ export default function LeadCaptureCard() {
                 placeholder="Enter Mobile Number"
                 className="flex-1 rounded-xl border border-gray-400 bg-[#F7E3D6] px-4 py-3 text-sm outline-none placeholder:text-gray-600 focus:border-teal-700"
               />
-              <button className="rounded-xl bg-teal-800 px-6 py-3 text-sm font-medium text-white">
+              <button
+                type="button"
+                className="rounded-xl bg-teal-800 px-6 py-3 text-sm font-medium text-white"
+              >
                 Verify
               </button>
             </div>
@@ -96,13 +102,19 @@ export default function LeadCaptureCard() {
         <div className="mt-6 flex items-center gap-4">
 
           {/* Submit Request */}
-          <button className="flex-1 rounded-2xl bg-teal-700 py-3 text-sm font-semibold text-white">
+          <button
+            type="button"
+            className="flex-1 rounded-2xl bg-teal-700 py-3 text-sm font-semibold text-white"
+          >
             Submit Request
           </button>
 
           {/* Schedule Demo */}
           <Link href="/demo" className="flex-1">
-            <button className="w-full rounded-2xl bg-teal-900 py-3 text-sm font-semibold text-white">
+            <button
+              type="button"
+              className="w-full rounded-2xl bg-teal-900 py-3 text-sm font-semibold text-white"
+            >
               Schedule a Demo
             </button>
           </Link>

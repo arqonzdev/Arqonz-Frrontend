@@ -1,5 +1,7 @@
 // src/components/home/TrendingProducts.tsx
 
+import Link from "next/link";
+
 const products = [
   { name: "Bricks", image: "🧱" },
   { name: "Concrete Blocks", image: "🏗️" },
@@ -16,13 +18,14 @@ export default function TrendingProducts() {
 
       <div className="flex gap-4 overflow-x-auto scrollbar-hide">
         {products.map((item) => (
-          <div
+          <Link
             key={item.name}
-            className="flex min-w-[120px] flex-col items-center gap-2 rounded-xl bg-white p-3 shadow-sm"
+            href={`/products/search?q=${encodeURIComponent(item.name)}`}
+            className="flex min-w-[120px] flex-col items-center gap-2 rounded-xl bg-white p-3 shadow-sm hover:shadow-md transition"
           >
-            <div className="text-3xl">{item.image}</div>
+            <div className="text-3xl select-none">{item.image}</div>
             <p className="text-xs text-gray-700">{item.name}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

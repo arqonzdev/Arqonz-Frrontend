@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { cities } from "@/data/cities";
 import CityProjectCard from "./CityProjectCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ProjectsByCity() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -21,8 +22,9 @@ export default function ProjectsByCity() {
   };
 
   return (
-    <section className="py-18">
+    <section className="py-20">
       <div className="mx-auto max-w-7xl px-6">
+
         {/* Header */}
         <div className="mb-8 flex items-center justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
@@ -32,18 +34,20 @@ export default function ProjectsByCity() {
             </span>
           </h2>
 
-          <a
-            href="#"
+          <Link
+            href="/projects"
             className="text-sm font-medium text-teal-600 hover:underline"
           >
             View All New Projects →
-          </a>
+          </Link>
         </div>
 
         {/* Slider */}
         <div className="relative">
+
           {/* Left Arrow */}
           <button
+            aria-label="Scroll Left"
             onClick={() => scroll("left")}
             className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow hover:bg-gray-50"
           >
@@ -62,6 +66,7 @@ export default function ProjectsByCity() {
 
           {/* Right Arrow */}
           <button
+            aria-label="Scroll Right"
             onClick={() => scroll("right")}
             className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow hover:bg-gray-50"
           >
