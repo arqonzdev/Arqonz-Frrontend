@@ -51,13 +51,47 @@ export const recommendedSections: RecommendedSection[] = [
     ]
   },
 
-  {
-    title: "Designers for you",
-    list: [/* same structure */]
-  },
+
+// Designers for you
 
   {
+    title: "Designers for you",   
+    list: [
+       {
+        id: 3,
+        rank: 3,
+        name: "Antony Jose",
+        title: "Professional Interior Architectural Designer",
+        completedProjects: 150,
+        locations: ["Bangalore", "Chennai", "Kerala"],
+        categories: ["Residential", "Commercial", "Renovation", "Plots"],
+        rating: 4.8,
+        reviewsCount: 10000,
+        image: "/images/professionals/antony3.jpg",
+        profileUrl: "/professionals/3"
+      }
+    ]
+  },
+
+
+
+  // Engineers near You
+  {
     title: "Engineers near You",
-    list: [/* same structure */]
+    list: [
+      {
+        id: 3,
+        rank: 3,
+        name: "Antony Jose",
+        title: "Professional Interior Architectural Designer",
+        completedProjects: 150,
+        locations: ["Bangalore", "Chennai", "Kerala"],
+        categories: ["Residential", "Commercial", "Renovation", "Plots"],
+        rating: 4.8,
+        reviewsCount: 10000,
+        image: "/images/professionals/antony3.jpg",
+        profileUrl: "/professionals/3"
+      }
+    ]
   }
 ];

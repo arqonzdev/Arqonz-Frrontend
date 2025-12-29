@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { engineers } from "@/data/engineers";
 import ProfileHeader from "@/components/professionals/ProfileHeader";
@@ -252,7 +253,7 @@ const related = engineers.filter(e =>
       </div>
 
 
-      {/* ================= RELATED SEARCH ================= */}
+     {/* ================= RELATED SEARCH ================= */}
 <div className="max-w-7xl mx-auto mt-16">
 
   <h2 className="text-2xl font-semibold mb-6">
@@ -274,33 +275,27 @@ const related = engineers.filter(e =>
 
         <div className="p-4">
 
-          {/* NAME */}
           <p className="font-semibold text-lg">
             {item.name}
           </p>
 
-          {/* ROLE (safe fallback) */}
           <p className="text-sm text-gray-500">
             {item.designation || "Professional Specialist"}
           </p>
 
-          {/* PRICE (safe fallback) */}
           <p className="mt-2 font-semibold">
             ₹{item.hourlyFee || 2499}
             <span className="text-sm text-gray-500"> / Hour</span>
           </p>
 
-          {/* BUTTON */}
-          <div className="mt-3">
-            <button
-              className="bg-amber-900 text-white w-full py-2 rounded-lg"
-              onClick={() =>
-                window.location.href = `/professionals/engineers/${item.id}`
-              }
-            >
-              View Details
-            </button>
-          </div>
+          <Link
+            href={`/enquiry/${item.id}`}
+            className="mt-4 block w-full bg-amber-700 
+            hover:bg-amber-800 text-white text-sm py-2 
+            rounded-xl text-center"
+          >
+            Send Enquiry
+          </Link>
 
         </div>
       </div>
@@ -309,6 +304,8 @@ const related = engineers.filter(e =>
   </div>
 
 </div>
+
+
 
     </div>
   );

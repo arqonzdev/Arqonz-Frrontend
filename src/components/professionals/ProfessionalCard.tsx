@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ProfessionalCard } from "@/types/professional";
+import { ProfessionalCard as ProfessionalCardType } from "@/types/professional";
 import { Heart } from "lucide-react";
 
 type Props = {
-  data: ProfessionalCard;
+  data: ProfessionalCardType;
 };
 
 export default function ProfessionalCard({ data }: Props) {
@@ -19,9 +19,7 @@ export default function ProfessionalCard({ data }: Props) {
       </div>
 
       {/* Fav Icon */}
-      <button
-        className="absolute top-2 right-2 text-gray-500 hover:text-red-500"
-      >
+      <button className="absolute top-2 right-2 text-gray-500 hover:text-red-500">
         <Heart size={18} />
       </button>
 
@@ -38,7 +36,6 @@ export default function ProfessionalCard({ data }: Props) {
 
       {/* CONTENT */}
       <div className="flex-1">
-
         <p className="font-semibold">{data.name}</p>
 
         <p className="text-sm text-gray-600">
@@ -62,18 +59,23 @@ export default function ProfessionalCard({ data }: Props) {
         </p>
 
         <div className="flex gap-3 mt-3">
-          <button className="px-4 py-2 rounded-xl bg-amber-700 text-white text-sm">
-          <Link href={`/enquiry/${data.id}`}>
-          Send Enquiry
-         </Link>
-          </button>
 
+          {/* SEND ENQUIRY */}
           <Link
-            href={data.profileUrl}
+            href={`/enquiry/${data.id}`}
+            className="px-4 py-2 rounded-xl bg-amber-700 text-white text-sm"
+          >
+            Send Enquiry
+          </Link>
+
+          {/* VIEW DETAILS */}
+          <Link
+            href={`/professionals/engineers/${data.id}`}
             className="px-4 py-2 rounded-xl bg-gray-800 text-white text-sm"
           >
             View Details
           </Link>
+
         </div>
       </div>
     </div>

@@ -32,6 +32,7 @@ export default function RecommendedSection() {
                 <ProfessionalCard key={item.id} data={item} />
               ))}
             </div>
+
           </div>
         ))}
 
