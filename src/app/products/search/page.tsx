@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 const tabs = [
   "Products",
@@ -12,8 +13,11 @@ const tabs = [
 
 export default function ProductSearchPage() {
 
+  // -------- Get search text from URL --------
   const params = useSearchParams();
-  const query = params.get("query") || "";
+ const query = params.get("q") || params.get("query") || "";
+
+  const search = query.trim();
 
   const [activeTab, setActiveTab] = useState("Products");
 
@@ -22,7 +26,7 @@ export default function ProductSearchPage() {
 
       {/* ---------------- TITLE ROW ---------------- */}
       <h2 className="text-2xl font-semibold">
-        Showing 4,000+ products from global suppliers for “{query}”
+        Showing 4,000+ products from global suppliers for “{search}”
       </h2>
 
       {/* ---------------- TABS ---------------- */}
@@ -70,7 +74,6 @@ function PriceFilter() {
 
       <p className="font-medium mb-2">PRICE</p>
 
-      {/* Slider */}
       <input
         type="range"
         min={0}
@@ -80,19 +83,14 @@ function PriceFilter() {
         className="w-full accent-red-500"
       />
 
-      {/* Value Row */}
       <div className="flex justify-between text-xs text-gray-500 mt-1">
         <span>Min ₹{min}</span>
         <span>₹{max}</span>
       </div>
 
-      {/* Backend-ready button */}
       <button
         className="mt-2 text-xs text-blue-600 underline"
-        onClick={() => {
-          console.log({ min, max });
-          // TODO: connect API later
-        }}
+        onClick={() => console.log({ min, max })}
       >
         Apply
       </button>
@@ -111,7 +109,6 @@ function FiltersPanel() {
   return (
     <div className="bg-white rounded-2xl shadow p-5 h-fit">
 
-      {/* Header */}
       <div className="flex justify-between items-center">
         <h3 className="font-semibold text-lg">Filters</h3>
         <button className="text-xs text-gray-500">
@@ -121,16 +118,13 @@ function FiltersPanel() {
 
       <div className="mt-4 text-sm">
 
-        {/* Category */}
         <p className="text-gray-500">Categories</p>
         <p className="font-medium mt-1">
           Products &gt; Cement
         </p>
 
-        {/* PRICE */}
         <PriceFilter />
 
-        {/* VERIFIED SUPPLIER */}
         <div className="mt-5">
           <label className="flex gap-2 items-center cursor-pointer">
             <input type="checkbox" />
@@ -138,7 +132,6 @@ function FiltersPanel() {
           </label>
         </div>
 
-        {/* DROPDOWNS */}
         {[
           "Customer Ratings",
           "Delivery By",
@@ -172,18 +165,15 @@ function FiltersPanel() {
    PRODUCT GRID
 =========================================================== */
 
-import Image from "next/image";
-
 function ProductGrid() {
 
-  // later you will replace this with real API data
   const products = Array.from({ length: 12 }).map(() => ({
     title:
       "High-Strength Cement Blocks – Durable, Weather-Resistant, and Built for Tough Conditions.",
     price: 1456,
     oldPrice: 1856,
     moq: 10,
-    image: "/cement.png",   // <-- default fallback image
+    image: "/cement.png",
     freeShipping: true,
     rating: 4.3,
   }));
@@ -194,7 +184,6 @@ function ProductGrid() {
       {products.map((p, i) => (
         <div key={i} className="bg-white rounded-2xl shadow p-4">
 
-          {/*  IMAGE WRAPPER (fixed ratio box)  */}
           <div className="w-full aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden relative">
             <Image
               src={p.image}
@@ -204,17 +193,14 @@ function ProductGrid() {
             />
           </div>
 
-          {/* TITLE */}
           <p className="mt-3 text-sm font-medium leading-snug line-clamp-2">
             {p.title}
           </p>
 
-          {/* MOQ */}
           <p className="text-xs text-gray-600 mt-1">
             MOQ: {p.moq}
           </p>
 
-          {/* PRICE */}
           <p className="mt-1">
             <span className="font-semibold text-lg">
               ₹{p.price}
@@ -224,14 +210,12 @@ function ProductGrid() {
             </span>
           </p>
 
-          {/* TAG */}
           {p.freeShipping && (
             <p className="text-green-600 text-sm">
               Free Shipping
             </p>
           )}
 
-          {/* BUTTON */}
           <button className="mt-3 w-full bg-gray-900 text-white rounded-xl py-2">
             Send Enquiry
           </button>
@@ -242,5 +226,3 @@ function ProductGrid() {
     </div>
   );
 }
-
-// export default ProductGrid;

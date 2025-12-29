@@ -177,7 +177,7 @@ export default function VideoSection() {
           <p className="font-medium">Chat with Supplier</p>
 
           <p className="text-xs text-gray-500 mt-1">
-            (Dummy chat — backend aane par connect kar denge)
+            (Dummy chat — backend data )
           </p>
 
           <textarea
