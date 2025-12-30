@@ -19,13 +19,13 @@ export default function RegisterBannerSection() {
   };
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-10">
-      <div className="relative overflow-hidden rounded-2xl">
+    <section className="mx-auto max-w-7xl px-6 pt-10 pb-24">
+      <div className="relative rounded-2xl">
 
         {/* Background Image */}
         <div className="relative h-[420px]">
           <Image
-            src="/images/register/register-bg.jpg"
+            src="/register/register-bg.png"
             alt="Register Banner"
             fill
             priority
@@ -57,8 +57,8 @@ export default function RegisterBannerSection() {
         </div>
 
         {/* Bottom Slider */}
-        <div className="absolute bottom-6 left-0 right-0 px-6">
-          <div className="relative flex items-center">
+        <div className="absolute left-0 right-0 bottom-0 translate-y-1/2 px-8">
+          <div className="relative flex items-center justify-center">
 
             {/* Left Arrow */}
             <button
@@ -72,7 +72,7 @@ export default function RegisterBannerSection() {
             {/* Cards */}
             <div
               ref={sliderRef}
-              className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-6"
+              className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide"
             >
               {registerRoles.map((role) => (
                 <RegisterRoleCard
@@ -91,6 +91,7 @@ export default function RegisterBannerSection() {
             >
               →
             </button>
+
           </div>
         </div>
 

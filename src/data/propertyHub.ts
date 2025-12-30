@@ -2,22 +2,22 @@ export const propertyHubItems = [
   {
     id: "apartments",
     title: "Apartments",
-    image: "/images/property/apartments.jpg",
+    image: "/property/apartments1.png",
     size: "large",
   },
   {
     id: "villas",
     title: "Villas",
-    image: "/images/property/villas.jpg",
+    image: "/property/villas2.png",
   },
   {
     id: "plots",
     title: "Plots",
-    image: "/images/property/plots.jpg",
+    image: "/property/plots2.png",
   },
   {
     id: "commercial",
     title: "Commercial",
-    image: "/images/property/commercial.jpg",
+    image: "/property/commercial1.png",
   },
 ];

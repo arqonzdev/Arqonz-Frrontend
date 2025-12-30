@@ -11,10 +11,10 @@ interface Props {
 
 export default function CityProjectCard({ city }: Props) {
   return (
-    <div className="min-w-[240px] overflow-hidden rounded-2xl bg-white shadow">
+    <div className="min-w-[250px] overflow-hidden rounded-2xl bg-white shadow">
 
       {/* Image */}
-      <div className="relative h-40">
+      <div className="relative h-80">
         <Image
           src={city.image}
           alt={city.name}   // good for SEO + accessibility

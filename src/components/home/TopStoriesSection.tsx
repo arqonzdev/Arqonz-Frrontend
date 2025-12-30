@@ -5,7 +5,7 @@ import { topStories } from "@/data/topstories";
 
 export default function TopStoriesSection() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-10">
+    <section className="mx-auto max-w-7xl px-6 py-8 ">
 
       {/* Heading */}
       <h3 className="mb-4 text-lg font-semibold text-gray-900">
@@ -13,13 +13,13 @@ export default function TopStoriesSection() {
       </h3>
 
       {/* Horizontal scroll */}
-      <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+      <div className="flex gap-4 overflow-x-auto pb-5 scrollbar-hide">
 
         {topStories.map((story) => (
           <Link
             key={story.id}
             href={story.href}
-            className="relative h-[150px] min-w-[220px] overflow-hidden rounded-xl bg-gray-200 hover:shadow"
+            className="relative h-[320px] min-w-[220px] overflow-hidden rounded-xl bg-gray-200 hover:shadow"
           >
             <Image
               src={story.image}

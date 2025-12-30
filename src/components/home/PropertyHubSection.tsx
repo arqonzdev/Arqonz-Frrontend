@@ -39,31 +39,76 @@ export default function PropertyHubSection() {
           </div>
         </div>
 
-        {/* CENTER */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-4">
-          {propertyHubItems.map((item) => (
-            <div
-              key={item.id}
-              className={`relative overflow-hidden rounded-xl ${
-                item.size === "large" ? "row-span-2" : ""
-              }`}
-            >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="(max-width: 1024px) 50vw, 400px"
-                className="object-cover"
-              />
+       {/* CENTER */}
+<div className="grid grid-cols-[1.3fr_1.7fr] gap-4">
 
-              <div className="absolute inset-0 bg-black/30" />
+  {/* LEFT BIG — APARTMENTS */}
+  <div className="relative overflow-hidden rounded-xl row-span-2 aspect-[3/4] shadow">
+    <Image
+      src={propertyHubItems[0].image}
+      alt={propertyHubItems[0].title}
+      fill
+      className="object-cover"
+    />
+    <div className="absolute inset-0 bg-black/30" />
+    <span className="absolute bottom-3 left-3 text-sm font-semibold text-white">
+      {propertyHubItems[0].title} →
+    </span>
+  </div>
 
-              <span className="absolute bottom-3 left-3 text-sm font-semibold text-white">
-                {item.title} →
-              </span>
-            </div>
-          ))}
-        </div>
+  {/* RIGHT SIDE GRID */}
+  <div className="grid grid-rows-[1fr_1fr] gap-4">
+
+    {/* VILLAS — FULL WIDTH */}
+    <div className="relative overflow-hidden rounded-xl shadow aspect-[5/3]">
+      <Image
+        src={propertyHubItems[1].image}
+        alt={propertyHubItems[1].title}
+        fill
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-black/30" />
+      <span className="absolute bottom-3 left-3 text-sm font-semibold text-white">
+        {propertyHubItems[1].title} →
+      </span>
+    </div>
+
+    {/* BOTTOM — 2 GRID ITEMS */}
+    <div className="grid grid-cols-2 gap-4">
+
+      {/* PLOTS */}
+      <div className="relative overflow-hidden rounded-xl shadow aspect-[4/3]">
+        <Image
+          src={propertyHubItems[2].image}
+          alt={propertyHubItems[2].title}
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <span className="absolute bottom-3 left-3 text-sm font-semibold text-white">
+          {propertyHubItems[2].title} →
+        </span>
+      </div>
+
+      {/* COMMERCIAL */}
+      <div className="relative overflow-hidden rounded-xl shadow aspect-[4/3]">
+        <Image
+          src={propertyHubItems[3].image}
+          alt={propertyHubItems[3].title}
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <span className="absolute bottom-3 left-3 text-sm font-semibold text-white">
+          {propertyHubItems[3].title} →
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
 
         {/* RIGHT */}
         <div className="flex flex-col justify-between">

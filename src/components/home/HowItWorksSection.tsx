@@ -12,7 +12,7 @@ const pros = [
 
 export default function MeetTheProsSection() {
   return (
-    <section className="bg-[#FFF4EA] py-12">
+    <section className="bg-[#FFF4EA] py-12 ">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
 
         {/* LEFT SIDE */}

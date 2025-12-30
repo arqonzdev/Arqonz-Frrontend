@@ -9,7 +9,7 @@ export default function StoriesSection() {
   if (!featured) return null;
 
   return (
-    <section className="bg-gray-50 py-10">
+    <section className="bg-gray-50 py-10 mt-24">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* HEADER */}

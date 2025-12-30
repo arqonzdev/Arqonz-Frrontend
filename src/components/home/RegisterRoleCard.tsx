@@ -7,8 +7,9 @@ interface Props {
 
 export default function RegisterRoleCard({ title, image }: Props) {
   return (
-    <div className="min-w-[240px] rounded-xl bg-white p-2 shadow-md hover:shadow-lg transition">
-      <div className="relative h-40 w-full overflow-hidden rounded-lg">
+    <div className="min-w-[250px] rounded-xl bg-white p-2 shadow-md hover:shadow-lg transition">
+
+      <div className="relative h-50 w-full overflow-hidden rounded-lg">
         <Image
           src={image}
           alt={title}
@@ -18,7 +19,7 @@ export default function RegisterRoleCard({ title, image }: Props) {
         />
       </div>
 
-      <p className="mt-3 text-center text-sm font-semibold text-gray-800">
+      <p className="mt-1 text-center text-sm font-semibold text-gray-800">
         {title}
       </p>
     </div>
