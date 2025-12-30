@@ -60,16 +60,31 @@ function VideoCard({
   const toggleVideo = () => {
     if (!videoRef.current) return;
 
-    if (playing) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
+    if (playing) videoRef.current.pause();
+    else videoRef.current.play();
+
     setPlaying(!playing);
   };
 
+  /* ========= AUTO-PLAY ON HOVER ========= */
+  const handleMouseEnter = () => {
+    if (!videoRef.current) return;
+    videoRef.current.muted = true;   // autoplay allowed
+    videoRef.current.play();
+  };
+
+  const handleMouseLeave = () => {
+    if (!videoRef.current) return;
+    videoRef.current.pause();
+    setPlaying(false);               // reset icon
+  };
+
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
+    <div
+      className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
 
       {/* Video */}
       <video

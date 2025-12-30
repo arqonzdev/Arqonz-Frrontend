@@ -4,14 +4,14 @@ export const testimonials = [
     name: "Ramesh K",
     role: "Founder of Sai Grills",
     video: "/videos/testimonial-1.mp4",
-    poster: "/images/testimonial-1.jpg",
+    poster: "/videos/testimonial.png",
   },
   {
     id: "2",
     name: "Samyuktha R",
     role: "Co-Founder of Granites.Co",
     video: "/videos/testimonial-2.mp4",
-    poster: "/images/testimonial-2.jpg",
+    poster: "/videos/testimonial-2.png",
   },
   {
     id: "3",
@@ -19,7 +19,7 @@ export const testimonials = [
     role: "Builder",
     company: "RS Constructions",
     message: "Arqonz made sourcing materials super easy.",
-    video: "/videos/review1.mp4",
-    poster: "/videos/review1.jpg"
+    video: "/videos/testimonial-3.mp4",
+    poster: "/videos/review1.png"
   }
 ];

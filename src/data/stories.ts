@@ -16,7 +16,7 @@ export const stories: Story[] = [
     title: "Top 5 Emerging Localities for Smart Investment",
     description:
       "Stay updated with fresh insights from the world of property, construction, and design. Discover trends, expert opinions, and real project stories shaping today’s market.",
-    image: "/images/stories/story-main.jpg",
+    image: "/stories/story-main.png",
     href: "/stories/top-5-emerging-localities",
   },
   {
@@ -25,7 +25,7 @@ export const stories: Story[] = [
     title: "Top 5 Emerging Localities for Smart Investment",
     description:
       "Stay updated with fresh insights from the world of property, construction, and design. Discover trends, expert opinions, and real project stories shaping today’s market.",
-    image: "/images/stories/story-1.jpg",
+    image: "/stories/story-1.png",
     href: "/stories/emerging-localities-rental",
   },
   {
@@ -34,7 +34,7 @@ export const stories: Story[] = [
     title: "Top 5 Emerging Localities for Smart Investment",
     description:
       "Stay updated with fresh insights from the world of property, construction, and design. Discover trends, expert opinions, and real project stories shaping today’s market.",
-    image: "/images/stories/story-2.jpg",
+    image: "/stories/story-2.png",
     href: "/stories/emerging-localities-smart",
   },
   {
@@ -43,7 +43,7 @@ export const stories: Story[] = [
     title: "Top 5 Emerging Localities for Smart Investment",
     description:
       "Stay updated with fresh insights from the world of property, construction, and design. Discover trends, expert opinions, and real project stories shaping today’s market.",
-    image: "/images/stories/story-3.jpg",
+    image: "/stories/story-3.png",
     href: "/stories/emerging-localities-growth",
   },
 ];

@@ -2,21 +2,21 @@ export const registerRoles = [
   {
     id: "interior",
     title: "Interior Designers",
-    image: "/images/register/interior.jpg",
+    image: "/register/interior.png",
   },
   {
     id: "engineers",
     title: "Engineers",
-    image: "/images/register/engineers.jpg",
+    image: "/register/engineers.png",
   },
   {
     id: "suppliers",
     title: "Suppliers",
-    image: "/images/register/suppliers.jpg",
+    image: "/register/suppliers.png",
   },
   {
     id: "ceiling",
     title: "Ceiling Suppliers",
-    image: "/images/register/ceiling.jpg",
+    image: "/register/ceiling.png",
   },
 ];
