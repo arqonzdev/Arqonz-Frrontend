@@ -36,7 +36,7 @@ export default function EcosystemSection() {
         {/* RIGHT IMAGE */}
         <div className="relative h-[315px] w-full overflow-hidden rounded-2xl">
           <Image
-            src="/images/ecosystem-right.jpg"
+            src="/eco/ecosystem-right.png"
             alt="Construction Planning"
             fill
             className="object-cover"

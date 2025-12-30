@@ -6,24 +6,24 @@ export const cities: City[] = [
     id: "1",
     name: "Hyderabad",
     projects: 700,
-    image: "/images/cities/hyderabad.jpg",
+    image: "/cities/hyderabad.png",
   },
   {
     id: "2",
     name: "Chengalpattu",
     projects: 800,
-    image: "/images/cities/chengalpattu.jpg",
+    image: "/cities/chengalpattu.png",
   },
   {
     id: "3",
     name: "Coimbatore",
     projects: 700,
-    image: "/images/cities/coimbatore.jpg",
+    image: "/cities/coimbatore.png",
   },
   {
     id: "4",
     name: "Trichy",
     projects: 760,
-    image: "/images/cities/trichy.jpg",
+    image: "/cities/trichy.png",
   },
 ];

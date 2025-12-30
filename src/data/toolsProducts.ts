@@ -25,7 +25,7 @@ export const toolsProducts: ToolProduct[] = [
   {
     id: 1,
     title: "High-Strength Cement Blocks",
-    image: "/products/cement1.png",
+    image: "/cement.png",
     price: 1456,
     discount: "20% off",
     moq: 10,
@@ -34,7 +34,7 @@ export const toolsProducts: ToolProduct[] = [
   {
     id: 2,
     title: "High-Strength Cement Blocks",
-    image: "/products/cement2.png",
+    image: "/cement.png",
     price: 1520,
     discount: "20% off",
     moq: 10,
@@ -43,7 +43,7 @@ export const toolsProducts: ToolProduct[] = [
   {
     id: 3,
     title: "High-Strength Cement Blocks",
-    image: "/products/cement3.png",
+    image: "/cement.png",
     price: 1600,
     discount: "20% off",
     moq: 10,
@@ -52,7 +52,7 @@ export const toolsProducts: ToolProduct[] = [
   {
     id: 4,
     title: "High-Strength Cement Blocks",
-    image: "/products/cement4.png",
+    image: "/cement.png",
     price: 1480,
     discount: "20% off",
     moq: 10,

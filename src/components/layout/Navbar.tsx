@@ -61,7 +61,7 @@ export default function Navbar() {
 
               {/* LOGO */}
               <Link href="/" className="flex items-center gap-2 sm:gap-3">
-                <Image src="/logo.svg" alt="Logo" width={36} height={36} />
+                <Image src="/AriQon_logo-web250x50-05 3.png" alt="Logo" width={36} height={36} />
                 <div>
                   <p className="text-base sm:text-lg font-semibold tracking-wide">
                     ARQONZ.COM

@@ -13,7 +13,7 @@ export default function OfferBanner() {
             className="relative h-[250px] bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1556912167-f556f1f39faa')",
+                "url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae')",
             }}
           >
             <div className="absolute inset-0 bg-black/45 p-6 flex flex-col justify-between">
@@ -48,7 +48,7 @@ export default function OfferBanner() {
                 "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')",
             }}
           >
-            <div className="absolute inset-0 bg-[#c6a06c]/90 p-6 flex flex-col justify-between">
+            <div className="absolute inset-0 bg-black/45 p-6 flex flex-col justify-between">
               <div>
                 <h2 className="text-2xl font-semibold text-white">
                   75 Properties for sale

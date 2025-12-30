@@ -50,15 +50,15 @@ export default function VisionSection() {
             </div>
           </div>
         </div>
+{/* Floating Cards */}
+<div className="absolute bottom-[-230px] left-1/2 w-full max-w-6xl -translate-x-1/2 px-4">
+  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {visionItems.map((item) => (
+      <VisionCard key={item.id} item={item} />
+    ))}
+  </div>
+</div>
 
-        {/* Floating Cards */}
-        <div className="absolute bottom-[-120px] left-1/2 w-full max-w-6xl -translate-x-1/2 px-4">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {visionItems.map((item) => (
-              <VisionCard key={item.id} item={item} />
-            ))}
-          </div>
-        </div>
 
       </div>
     </section>

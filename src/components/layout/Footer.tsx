@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="md:col-span-2">
 
             <Link href="/" className="flex items-center gap-3">
-              <Image src="/logo.svg" alt="Arqonz" width={46} height={46} />
+              <Image src="/AriQon_logo-web250x50-05 3.png" alt="Arqonz" width={46} height={46} />
               <div>
                 <h3 className="text-lg font-semibold tracking-widest">
                   ARQONZ.COM

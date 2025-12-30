@@ -5,25 +5,25 @@ const products = [
     title: "High-Strength Cement Blocks",
     price: "₹1,456",
     rating: "4.3",
-    image: "/images/cement.png",
+    image: "/cement.png",
   },
   {
     title: "High-Strength Cement Blocks",
     price: "₹1,456",
     rating: "4.3",
-    image: "/images/cement.png",
+    image: "/cement.png",
   },
   {
     title: "High-Strength Cement Blocks",
     price: "₹1,456",
     rating: "4.3",
-    image: "/images/cement.png",
+    image: "/cement.png",
   },
   {
     title: "High-Strength Cement Blocks",
     price: "₹1,456",
     rating: "4.3",
-    image: "/images/cement.png",
+    image: "/cement.png",
   },
 ];
 

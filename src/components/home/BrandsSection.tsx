@@ -27,7 +27,7 @@ export default function BrandsSection() {
   };
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-28">
+    <section className="mx-auto max-w-7xl px-6 py-60">
       <div className="relative rounded-3xl border border-gray-300 bg-[#fffaf3] p-12">
 
         {/* CONTENT GRID */}
@@ -58,7 +58,7 @@ export default function BrandsSection() {
             {/* SLIDER */}
             <div
               ref={sliderRef}
-              className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-2"
+              className="grid grid-cols-5 gap-8 px-2"
             >
               {brands.map((brand) => (
                 <BrandLogo key={brand.id} brand={brand} />

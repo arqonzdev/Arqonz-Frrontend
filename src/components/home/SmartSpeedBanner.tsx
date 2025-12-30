@@ -5,7 +5,14 @@ export default function SmartSpeedBanner() {
     <div className="relative rounded-2xl overflow-hidden min-h-[420px]">
 
       {/* Background (solid for now — can be image later) */}
-      <div className="absolute inset-0 bg-gray-800" />
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/viewed/smartb.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />

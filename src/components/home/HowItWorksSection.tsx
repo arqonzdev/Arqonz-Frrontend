@@ -5,9 +5,9 @@ import Link from "next/link";
 import { howItWorksSteps } from "@/data/howItWorks";
 
 const pros = [
-  { id: "architect", title: "Architects", image: "/images/pros/architect.jpg" },
-  { id: "interior", title: "Interior Designers", image: "/images/pros/interior.jpg" },
-  { id: "engineer", title: "Engineers", image: "/images/pros/engineer.jpg" },
+  { id: "architect", title: "Architects", image: "/pros/architect.png" },
+  { id: "interior", title: "Interior Designers", image: "/pros/interior.png" },
+  { id: "engineer", title: "Engineers", image: "/pros/engineer.png" },
 ];
 
 export default function MeetTheProsSection() {
