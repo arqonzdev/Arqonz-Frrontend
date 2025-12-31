@@ -32,7 +32,7 @@ export default function ProductsStatsPanel() {
         className="
         bg-gradient-to-r from-cyan-500 to-teal-400
         rounded-[32px]
-        p-10
+        p-20
         shadow-xl
         flex flex-col md:flex-row
         justify-between
@@ -84,7 +84,7 @@ export default function ProductsStatsPanel() {
               className="
                 bg-white
                 rounded-2xl
-                p-4
+                p-8
                 text-center
                 shadow-md
                 text-gray-800

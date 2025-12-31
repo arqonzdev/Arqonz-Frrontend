@@ -1,5 +1,4 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
 
 export default function RecommendedDeals() {
@@ -22,8 +21,8 @@ export default function RecommendedDeals() {
   return (
     <section className="mt-16">
 
-      <h2 className="text-center text-3xl font-semibold mb-10">
-        Recommended best deals
+      <h2 className="text-center text-3xl font-bold mb-15">
+          Recommended best deals
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -37,12 +36,10 @@ export default function RecommendedDeals() {
             `}
           >
 
-            {/* Title */}
             <h3 className="text-3xl font-semibold text-center leading-snug">
-              {b.title}
+              _{b.title}
             </h3>
 
-            {/* Button */}
             <div className="flex justify-center mt-6">
               <Link
                 href="/products"
@@ -56,7 +53,8 @@ export default function RecommendedDeals() {
               </Link>
             </div>
 
-            {/* PRODUCT GRID — 2 x 2 */}
+
+            {/* PRODUCT GRID */}
             <div
               className={`
                 grid grid-cols-2 gap-6
@@ -72,7 +70,15 @@ export default function RecommendedDeals() {
                   "
                 >
 
-                  <div className="w-full h-20 bg-gray-200 rounded-xl" />
+                  {/* IMAGE HERE */}
+                  <div className="w-full h-20 rounded-xl overflow-hidden relative">
+                    <Image
+                      src="/cement.png"
+                      alt="High strength block"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
                   <p className="mt-2 text-xs line-clamp-2">
                     High-Strength Cement Blocks – Durable,

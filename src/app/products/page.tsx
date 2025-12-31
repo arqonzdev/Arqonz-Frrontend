@@ -6,7 +6,8 @@ import ProductsStatsPanel from "@/components/products/ProductsStatsPanel";
 import ProductSection from "@/components/products/ProductSection";
 import AllProductsGrid from "@/components/products/AllProductsGrid";
 
-import { topDeals, newArrivals } from "@/data/products";
+import { topDeals, newArrivals, allProducts } from "@/data/products";
+
 
 export default function ProductsPage() {
   return (
@@ -35,9 +36,7 @@ export default function ProductsPage() {
         />
 
         {/* ⭐ Full Product Listing Grid */}
-        <AllProductsGrid
-          products={[...topDeals, ...newArrivals]}
-        />
+       <AllProductsGrid products={allProducts} />
 
       </div>
     </>

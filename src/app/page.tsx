@@ -10,7 +10,7 @@ import HowItWorksSection from "@/components/home/HowItWorksSection";
 import ProjectsByCity from "@/components/home/ProjectsByCity";
 import TopStoriesSection from "@/components/home/TopStoriesSection";
 import OfferBanner from "@/components/home/OfferBanner";
-import ToolsSection from "@/components/home/ToolsSection";
+import ToolsSectionWrapper from "@/components/home/ToolsSectionWrapper";
 import PropertyHubSection from "@/components/home/PropertyHubSection";
 import RegisterBannerSection from "@/components/home/RegisterBannerSection";
 import StoriesSection from "@/components/home/StoriesSection";
@@ -29,7 +29,7 @@ export default function HomePage() {
       <ProjectsByCity />
       <TopStoriesSection /> 
       <OfferBanner />
-      <ToolsSection />
+      <ToolsSectionWrapper />
       <PropertyHubSection />
       <RegisterBannerSection />
       <StoriesSection />

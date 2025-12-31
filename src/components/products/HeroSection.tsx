@@ -21,7 +21,7 @@ export default function HeroSection() {
         {/* Image */}
         <div className="mt-10">
           <img
-            src="/banner.jpg"
+            src="/banner.png"
             alt="Construction Site"
             className="rounded-3xl w-full object-cover shadow"
           />
