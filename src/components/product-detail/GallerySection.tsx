@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const images = [
-  "/cement1.jpg",
-  "/cement2.jpg",
-  "/cement3.jpg",
-  "/cement4.jpg",
+  "/details/cement.png",
+  "/details/cement1.png",
+  "/details/cement3.png",
+  "/details/cement4.png",
 ];
 
 export default function GallerySection() {

@@ -2,19 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
-interface SupplierProduct {
-  id: string;
-  title: string;
-  price: number;
-  originalPrice?: number;
-  minOrder: string;
-  image: string;
-  slug: string;
-}
+import { Product } from "@/types/product";
 
 interface Props {
-  products?: SupplierProduct[];
+  products?: Product[];
 }
 
 export default function SupplierPopularProducts({ products = [] }: Props) {
@@ -62,11 +53,11 @@ export default function SupplierPopularProducts({ products = [] }: Props) {
                 </div>
 
                 <p className="text-xs text-gray-600 mt-1">
-                  Min Order: {p.minOrder}
+                  Min Order: {p.minOrderQty}
                 </p>
 
                 <p className="text-emerald-700 text-sm font-medium mt-1">
-                  20% off
+                  {p.discountPercent}% off
                 </p>
               </div>
             </Link>
@@ -86,16 +77,9 @@ export default function SupplierPopularProducts({ products = [] }: Props) {
       </div>
 
 
-
-      {/* =============== CHAT POPUP =============== */}
       {showChat && (
         <div className="fixed bottom-6 right-6 bg-white shadow-lg rounded-xl p-4 w-80">
-
           <p className="font-medium">Chat with Supplier</p>
-
-          <p className="text-xs text-gray-500 mt-1">
-            (Dummy chat — backend add)
-          </p>
 
           <textarea
             className="w-full border rounded-lg mt-3 p-2 text-sm"

@@ -206,3 +206,96 @@ export const allProducts: Product[] = [
     slug: "bathroom-sink"
   }
 ];
+
+
+
+
+
+
+
+
+/* -------- Supplier Popular Products -------- */
+export const supplierPopularProducts: Product[] = [
+  {
+    id: "1",
+    title: "High-Strength Cement Blocks — Durable & Weather-Resistant",
+    price: 1456,
+    originalPrice: 1856,
+    minOrderQty: "1 ton",
+    discountPercent: 20,
+    rating: 4.3,
+    image: "/supplier-products/cement4.png",
+    slug: "cement-block-1"
+  },
+  {
+    id: "2",
+    title: "Premium Quality Grey Cement for Construction",
+    price: 1556,
+    originalPrice: 1856,
+    minOrderQty: "5 Bags",
+    discountPercent: 20,
+    rating: 4.5,
+    image: "/supplier-products/cement3.png",
+    slug: "premium-grey-cement"
+  },
+  {
+    id: "3",
+    title: "Construction Grade Cement Bricks",
+    price: 1256,
+    originalPrice: 1656,
+    minOrderQty: "500 pcs",
+    discountPercent: 24,
+    rating: 4.1,
+    image: "/supplier-products/cement5.png",
+    slug: "cement-bricks"
+  }
+];
+
+
+/* -------- Other Recommended Products -------- */
+export const recommendedProducts: Product[] = [
+  {
+    id: "10",
+    title: "High-Strength Cement Blocks",
+    price: 1456,
+    originalPrice: 1856,
+    minOrderQty: "1 ton",
+    discountPercent: 20,
+    rating: 4.3,
+    image: "/supplier-products/cement4.png",
+    slug: "cement-block-2"
+  },
+  {
+    id: "11",
+    title: "Premium Grey Cement",
+    price: 1499,
+    originalPrice: 1899,
+    minOrderQty: "5 Bags",
+    discountPercent: 21,
+    rating: 4.4,
+    image:"/supplier-products/cement4.png",
+    slug: "grey-cement-2"
+  },
+  {
+    id: "12",
+    title: "Solid Construction Bricks",
+    price: 1200,
+    originalPrice: 1600,
+    minOrderQty: "300 pcs",
+    discountPercent: 25,
+    rating: 4.2,
+    image: "/supplier-products/cement4.png",
+    slug: "construction-bricks-2"
+  },
+  {
+    id: "13",
+    title: "Ready Mix Concrete Material",
+    price: 2500,
+    originalPrice: 3000,
+    minOrderQty: "1 ton",
+    discountPercent: 17,
+    rating: 4.6,
+    image: "/supplier-products/cement4.png",
+    slug: "ready-mix-concrete"
+  }
+];

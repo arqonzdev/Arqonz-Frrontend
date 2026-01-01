@@ -50,7 +50,7 @@ export default function VideoSection() {
             controls
             className="w-full rounded-2xl shadow bg-black aspect-video object-cover"
           >
-            <source src={videoUrl} type="video/mp4" />
+          <source src={videoUrl} type="video/mp4" />
           </video>
         </div>
 

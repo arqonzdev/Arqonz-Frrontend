@@ -53,15 +53,17 @@ export default function KnowSupplier({ supplier }: Props) {
 
 
           {/* Company Overview */}
-          <div className="mt-6">
-            <p className="font-semibold">
-              Company Overview
-            </p>
+<div className="mt-6">
+  <p className="font-semibold">
+    Company Overview
+  </p>
 
-            <p className="text-gray-700 text-sm mt-2 leading-relaxed">
-              {supplier.overview}
-            </p>
-          </div>
+  <p className="text-gray-700 text-sm mt-2 leading-relaxed">
+    We are in the Industry Since 2024, A retail shop, also known as a retail
+    store, is a physical establishment where businesses sell products directly
+    to consumers for personal use. We are in the Industry Since 2024.
+  </p>
+</div>
 
 
           {/* Stats Bar */}

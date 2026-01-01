@@ -7,10 +7,9 @@ export interface Product {
   price: number;
   originalPrice?: number;
   discountPercent?: number;
-  minOrderQty: number;
+  minOrderQty: number | string;
   rating: number;
-
-  slug: string;   // 👈 ADD THIS
+  slug: string;
 }
 
 
