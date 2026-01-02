@@ -14,7 +14,6 @@ export default function EngineerDetailsPage() {
 
   if (!engineer) return <div className="p-10">Engineer Not Found</div>;
 
-  // ⭐ NEW LOGIC
   const projectsRef = useRef<HTMLDivElement>(null);
   const recoRef = useRef<HTMLDivElement>(null);
   const reviewRef = useRef<HTMLDivElement>(null);
@@ -28,16 +27,13 @@ export default function EngineerDetailsPage() {
 
   const [tag, setTag] = useState<string | null>(null);
 
-
   const related = engineers.filter(e =>
     e.city.includes(engineer.city.split(",")[0]) && e.id !== engineer.id
   );
 
-
   return (
     <div className="pb-24">
 
-      {/* COVER IMAGE */}
       <div className="relative w-full h-72">
         <Image
           src="/images/pro/cover.jpg"
@@ -48,16 +44,12 @@ export default function EngineerDetailsPage() {
         />
       </div>
 
-      {/* MAIN CONTENT */}
       <div className="max-w-7xl mx-auto -mt-16 flex gap-8 relative z-10">
 
-        {/* LEFT CARD */}
         <ProfileHeader data={engineer} />
 
-        {/* RIGHT SECTION */}
         <div className="flex-1 bg-white rounded-2xl shadow p-8">
 
-          {/* HEADER */}
           <div className="flex justify-between">
             <h2 className="text-2xl font-semibold">
               About {engineer.name}
@@ -71,7 +63,6 @@ export default function EngineerDetailsPage() {
             </button>
           </div>
 
-          {/* TOP DETAILS */}
           <div className="grid grid-cols-5 mt-6 gap-6 text-sm">
 
             <div>
@@ -103,7 +94,6 @@ export default function EngineerDetailsPage() {
 
           </div>
 
-          {/* ================= TABS ================= */}
           <div className="flex gap-3 mt-10">
             <button
               onClick={() => projectsRef.current?.scrollIntoView({ behavior: "smooth" })}
@@ -127,7 +117,6 @@ export default function EngineerDetailsPage() {
             </button>
           </div>
 
-          {/* ================= PROJECTS ================= */}
           <div ref={projectsRef} className="grid grid-cols-4 gap-6 mt-8">
             {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
               <div key={i} className="rounded-xl overflow-hidden shadow">
@@ -142,7 +131,6 @@ export default function EngineerDetailsPage() {
             ))}
           </div>
 
-          {/* ================= RECOMMENDATIONS ================= */}
           <h3 ref={recoRef} className="text-xl font-semibold mt-12 mb-4">
             Recommendations
           </h3>
@@ -179,7 +167,6 @@ export default function EngineerDetailsPage() {
             </div>
           ))}
 
-          {/* ================= TOP REVIEWS ================= */}
           <div ref={reviewRef} className="flex justify-between mt-12">
             <h3 className="text-xl font-semibold">Top Reviews</h3>
             <p className="text-amber-900 font-semibold">
@@ -187,7 +174,6 @@ export default function EngineerDetailsPage() {
             </p>
           </div>
 
-          {/* TAG FILTERS */}
           <div className="flex gap-3 mt-3">
             {["SuperStar", "Punctual", "Starplanner"].map(t => (
               <button
@@ -230,7 +216,6 @@ export default function EngineerDetailsPage() {
             </button>
           )}
 
-          {/* WRITE REVIEW */}
           <div className="mt-6 border rounded-xl p-4 flex gap-3">
             ✏️
             <input
@@ -243,7 +228,6 @@ export default function EngineerDetailsPage() {
 
       </div>
 
-      {/* ================= RELATED SEARCH ================= */}
       <div className="max-w-7xl mx-auto mt-16">
 
         <h2 className="text-2xl font-semibold mb-6">
