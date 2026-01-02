@@ -1,19 +1,22 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
-export default function ConfirmPage() {
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
+function ConfirmPage() {
 
   const params = useSearchParams();
   const time = params.get("time") || "—";
-  const date = params.get("date") || "";   // ← coming from URL like 2025-06-10
+  const date = params.get("date") || "";
 
   const router = useRouter();
 
   const { register, handleSubmit } = useForm();
 
-  // ⭐ FORMAT DATE + TIME
   const formattedDate = date
     ? new Date(date).toLocaleDateString("en-US", {
         weekday: "long",
@@ -25,37 +28,26 @@ export default function ConfirmPage() {
 
   const submit = () => {
     alert("Booking Confirmed!");
-    router.push("/");  // smooth redirect
+    router.push("/");
   };
 
   return (
     <div className="min-h-screen bg-muted flex items-center justify-center">
-
       <div className="bg-card text-card-foreground w-[1100px] rounded-2xl shadow-xl p-10 flex gap-10 border">
 
         {/* LEFT */}
         <div className="w-[360px]">
-
-          <img src="/logo.png" className="h-10 mb-6" />
-
-          <p className="text-sm text-muted-foreground font-medium">
-            QuickCall Demo
-          </p>
-
-          <h2 className="text-2xl font-bold mt-1">
-            Demo Call
-          </h2>
-
+          <img src="/AriQon_logo-web250x50-05 3.png" className="h-10 mb-6" />
+          <p className="text-sm text-muted-foreground font-medium">QuickCall Demo</p>
+          <h2 className="text-2xl font-bold mt-1">Demo Call</h2>
           <div className="flex items-center gap-2 text-muted-foreground mt-2">
             ⏱ <span>10 min</span>
           </div>
-
           <p className="text-sm text-muted-foreground mt-4 leading-6">
             See our product in action with a live 1-on-1 session.
             In just 10 minutes, well walk you through the key features,
             answer your questions, and show you how it can fit your business.
           </p>
-
         </div>
 
         {/* RIGHT */}
@@ -72,27 +64,19 @@ export default function ConfirmPage() {
             Confirm Your Booking
           </h3>
 
-          {/* SELECTED SLOT */}
           <div className="border rounded-xl p-4 mb-6 bg-muted/60">
 
-            {/* ⭐ DATE LINE */}
             {formattedDate && (
-              <div className="font-medium">
-                {formattedDate}
-              </div>
+              <div className="font-medium">{formattedDate}</div>
             )}
 
-            {/* ⭐ TIME LINE */}
-            <div className="font-semibold mt-1">
-              {time}
-            </div>
+            <div className="font-semibold mt-1">{time}</div>
 
             <div className="text-sm text-muted-foreground">
               Time Zone: India/Kolkata
             </div>
           </div>
 
-          {/* FORM */}
           <form onSubmit={handleSubmit(submit)} className="space-y-4">
 
             <input
@@ -124,11 +108,17 @@ export default function ConfirmPage() {
             </button>
 
           </form>
-
         </div>
 
       </div>
-
     </div>
+  );
+}
+
+export default function PageWrapper() {
+  return (
+    <Suspense fallback={null}>
+      <ConfirmPage />
+    </Suspense>
   );
 }

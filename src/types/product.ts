@@ -17,6 +17,7 @@ export interface Supplier {
   name: string;
   location: string;
   type: string;
+  logo?: string;
 
   stats: {
     ordersDelivered: string;

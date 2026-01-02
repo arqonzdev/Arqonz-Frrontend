@@ -2,9 +2,16 @@
 
 import { toolCategories } from "@/data/toolsProducts";
 
-export default function ToolCategoryList() {
+type Props = {
+  mobile?: boolean;   // ⭐ optional prop
+};
+
+export default function ToolCategoryList({ mobile }: Props) {
   return (
-    <div className="w-64 shrink-0 rounded-2xl bg-white p-4 shadow-sm">
+    <div
+      className={`rounded-2xl bg-white p-4 shadow-sm 
+      ${mobile ? "w-full" : "w-64 shrink-0"}`}
+    >
       <h3 className="mb-3 text-sm font-semibold text-gray-900">
         Tools Categories
       </h3>

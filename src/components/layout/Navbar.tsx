@@ -22,7 +22,10 @@ const navLinks = [
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
-  const timer = useRef(null);
+
+  // ✅ FIXED TYPE (only change)
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const router = useRouter();
   const [query, setQuery] = useState("");
 
@@ -35,7 +38,7 @@ export default function Navbar() {
     timer.current = setTimeout(() => setOpenMenu(false), 120);
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!query.trim()) return;
     router.push(`/products/search?q=${encodeURIComponent(query)}`);
@@ -72,7 +75,7 @@ export default function Navbar() {
                 </div>
               </Link>
 
-              {/* SEARCH (MOBILE FULL WIDTH BELOW) */}
+              {/* SEARCH DESKTOP */}
               <form
                 onSubmit={handleSearch}
                 className="hidden sm:flex relative flex-1 max-w-3xl"
@@ -148,7 +151,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
 
       {/* MOBILE NAV PANEL */}
       {mobileNav && (

@@ -8,6 +8,8 @@ export interface ToolProduct {
   discount: string;
   moq: number;
   rating: number;
+
+  slug: string;   // ⭐ added for product URL
 }
 
 export const toolCategories = [
@@ -30,6 +32,7 @@ export const toolsProducts: ToolProduct[] = [
     discount: "20% off",
     moq: 10,
     rating: 4.3,
+    slug: "high-strength-cement-blocks-1",
   },
   {
     id: 2,
@@ -39,6 +42,7 @@ export const toolsProducts: ToolProduct[] = [
     discount: "20% off",
     moq: 10,
     rating: 4.3,
+    slug: "high-strength-cement-blocks-2",
   },
   {
     id: 3,
@@ -48,6 +52,7 @@ export const toolsProducts: ToolProduct[] = [
     discount: "20% off",
     moq: 10,
     rating: 4.3,
+    slug: "high-strength-cement-blocks-3",
   },
   {
     id: 4,
@@ -57,5 +62,6 @@ export const toolsProducts: ToolProduct[] = [
     discount: "20% off",
     moq: 10,
     rating: 4.3,
+    slug: "high-strength-cement-blocks-4",
   },
 ];

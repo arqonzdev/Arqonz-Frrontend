@@ -4,6 +4,7 @@ export interface Category {
   name: string;
   image: string;
   href: string;
+   title?: string;
 }
 
 // your new type

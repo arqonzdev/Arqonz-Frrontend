@@ -3,18 +3,34 @@
 "use client";
 
 import { Search, Camera } from "lucide-react";
+
 // TODO: later connect backend search API
-// import { useState } from "react";
+import { useState } from "react";
+
+// ⭐ NEW — for navigation
+import { useRouter } from "next/navigation";
+
 
 export default function HeroSearchBox() {
 
   // TODO: backend search keyword state
-  // const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("");
+
+  // ⭐ NEW — router for redirect
+  const router = useRouter();
 
   // TODO: backend search submit handler
-  // const handleSearch = async () => {
-  //   await fetch(`/api/search?q=${query}`);
-  // };
+  const handleSearch = async () => {
+
+    // stop empty search
+    if (!query.trim()) return;
+
+    // ⭐ redirect to search page (same as navbar)
+    router.push(`/products/search?q=${encodeURIComponent(query)}`);
+
+    // TODO: later call backend also
+    // await fetch(`/api/search?q=${query}`);
+  };
 
   return (
     <div className="rounded-2xl bg-white p-6 shadow-sm">
@@ -27,13 +43,12 @@ export default function HeroSearchBox() {
 
           <input
             type="text"
-            defaultValue="Non-perishable cement"
             placeholder="Search by products, professionals or services"
             className="w-full rounded-xl py-4 pl-11 pr-40 text-sm outline-none"
 
             // TODO: enable later
-            // value={query}
-            // onChange={(e) => setQuery(e.target.value)}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
 
           {/* AQIQ */}
@@ -48,7 +63,7 @@ export default function HeroSearchBox() {
           {/* Search button */}
           <button
             className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-orange-100 px-4 py-2 text-xs font-semibold text-gray-900"
-            // onClick={handleSearch}
+            onClick={handleSearch}
           >
             🔍 Search
           </button>
@@ -77,8 +92,12 @@ export default function HeroSearchBox() {
           <span
             key={item}
             className="ml-2 cursor-pointer underline hover:text-teal-700"
+
             // TODO: later trigger quick search
-            // onClick={() => setQuery(item)}
+            onClick={() => {
+              setQuery(item);
+              router.push(`/products/search?q=${encodeURIComponent(item)}`);
+            }}
           >
             {item}
           </span>

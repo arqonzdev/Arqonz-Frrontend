@@ -1,15 +1,16 @@
-export type EngineerProfile = {
+export type Engineer = {
   id: number;
   name: string;
-  title: string;
   company: string;
   city: string;
   rating: number;
   reviews: number;
   verified: boolean;
-  experience: number;
+  years: number;
   projects: number;
-  tools: string[];
+  sectors: string[];
   image: string;
-  cover: string;
+
+  designation?: string;
+  hourlyFee?: number;   // ⭐ IMPORTANT
 };

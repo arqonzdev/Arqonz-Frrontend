@@ -6,10 +6,12 @@ import ToolCategoryList from "./ToolCategoryList";
 import ToolProductCard from "./ToolProductCard";
 
 export default function ToolsMarketplaceSection() {
-  const sliderRef = useRef(null);
 
-  const scroll = (dir) => {
+  const sliderRef = useRef<HTMLDivElement | null>(null);
+
+  const scroll = (dir: "left" | "right") => {
     if (!sliderRef.current) return;
+
     sliderRef.current.scrollBy({
       left: dir === "left" ? -260 : 260,
       behavior: "smooth",
@@ -36,7 +38,7 @@ export default function ToolsMarketplaceSection() {
         {/* SLIDER */}
         <div className="relative flex-1">
 
-          {/* LEFT ARROW (HIDDEN ON MOBILE) */}
+          {/* LEFT ARROW */}
           <button
             onClick={() => scroll("left")}
             className="hidden sm:flex absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow"
@@ -54,7 +56,7 @@ export default function ToolsMarketplaceSection() {
             ))}
           </div>
 
-          {/* RIGHT ARROW (HIDDEN ON MOBILE) */}
+          {/* RIGHT ARROW */}
           <button
             onClick={() => scroll("right")}
             className="hidden sm:flex absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow"

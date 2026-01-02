@@ -42,7 +42,7 @@ export default function DemoPage() {
         {/* LEFT */}
         <div className="w-[360px]">
 
-          <img src="/logo.png" className="h-10 mb-6" />
+          <img src="/AriQon_logo-web250x50-05 3.png" className="h-10 mb-6" />
 
           <p className="text-sm text-muted-foreground font-medium">
             QuickCall Demo

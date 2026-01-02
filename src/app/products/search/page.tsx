@@ -1,8 +1,13 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 const tabs = [
   "Products",
@@ -11,11 +16,10 @@ const tabs = [
   "Verified Suppliers",
 ];
 
-export default function ProductSearchPage() {
+function ProductSearchPageInner() {
 
-  // -------- Get search text from URL --------
   const params = useSearchParams();
- const query = params.get("q") || params.get("query") || "";
+  const query = params.get("q") || params.get("query") || "";
 
   const search = query.trim();
 
@@ -24,12 +28,10 @@ export default function ProductSearchPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 mt-10">
 
-      {/* ---------------- TITLE ROW ---------------- */}
       <h2 className="text-2xl font-semibold">
         Showing 4,000+ products from global suppliers for “{search}”
       </h2>
 
-      {/* ---------------- TABS ---------------- */}
       <div className="flex gap-10 mt-6 border-b pb-2 text-gray-600">
         {tabs.map((tab) => (
           <button
@@ -44,17 +46,22 @@ export default function ProductSearchPage() {
         ))}
       </div>
 
-      {/* ---------------- 2 COLUMN LAYOUT ---------------- */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
 
-        {/* LEFT SIDE FILTER PANEL */}
         <FiltersPanel />
 
-        {/* RIGHT SIDE PRODUCT GRID */}
         <ProductGrid />
 
       </div>
     </div>
+  );
+}
+
+export default function ProductSearchPage() {
+  return (
+    <Suspense fallback={null}>
+      <ProductSearchPageInner />
+    </Suspense>
   );
 }
 
@@ -216,9 +223,11 @@ function ProductGrid() {
             </p>
           )}
 
-          <button className="mt-3 w-full bg-gray-900 text-white rounded-xl py-2">
-            Send Enquiry
-          </button>
+          <Link href={"/enquiry"}>
+            <button className="mt-3 w-full bg-gray-900 text-white rounded-xl py-2">
+              Send Enquiry
+            </button>
+          </Link>
 
         </div>
       ))}

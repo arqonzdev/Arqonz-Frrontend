@@ -10,6 +10,10 @@ export type Engineer = {
   projects: number;
   sectors: string[];
   image: string;
+
+  // ⭐ optional fields for details page
+  designation?: string;
+  hourlyFee?: number;
 };
 
 export const engineers: Engineer[] = [
@@ -25,6 +29,8 @@ export const engineers: Engineer[] = [
     projects: 10,
     sectors: ["Residential", "Commercial", "Industrial"],
     image: "/images/pro/eng1.jpg",
+    designation: "Senior Civil Engineer",
+    hourlyFee: 2500,
   },
   {
     id: 2,
@@ -38,6 +44,8 @@ export const engineers: Engineer[] = [
     projects: 12,
     sectors: ["Residential", "Industrial"],
     image: "/images/pro/eng2.jpg",
+    designation: "Structural Engineer",
+    hourlyFee: 2200,
   },
   {
     id: 3,
@@ -51,6 +59,8 @@ export const engineers: Engineer[] = [
     projects: 15,
     sectors: ["Commercial", "Industrial"],
     image: "/images/pro/eng3.jpg",
+    designation: "Project Engineer",
+    hourlyFee: 2100,
   },
   {
     id: 4,
@@ -64,6 +74,8 @@ export const engineers: Engineer[] = [
     projects: 18,
     sectors: ["Residential", "Commercial"],
     image: "/images/pro/eng4.jpg",
+    designation: "Consultant Engineer",
+    hourlyFee: 2600,
   },
   {
     id: 5,
@@ -77,6 +89,7 @@ export const engineers: Engineer[] = [
     projects: 11,
     sectors: ["Industrial", "Commercial"],
     image: "/images/pro/eng5.jpg",
+    hourlyFee: 1800,
   },
   {
     id: 6,
@@ -90,6 +103,7 @@ export const engineers: Engineer[] = [
     projects: 16,
     sectors: ["Residential", "Commercial"],
     image: "/images/pro/eng6.jpg",
+    hourlyFee: 2400,
   },
   {
     id: 7,
@@ -97,12 +111,13 @@ export const engineers: Engineer[] = [
     company: "Vertex Structural Solutions",
     city: "Mumbai, Pune",
     rating: 4.6,
-    reviews:  90,
+    reviews: 90,
     verified: true,
     years: 6,
     projects: 14,
     sectors: ["Commercial", "Industrial"],
     image: "/images/pro/eng7.jpg",
+    hourlyFee: 2000,
   },
   {
     id: 8,
@@ -116,6 +131,7 @@ export const engineers: Engineer[] = [
     projects: 20,
     sectors: ["Residential", "Green Buildings"],
     image: "/images/pro/eng8.jpg",
+    hourlyFee: 2700,
   },
   {
     id: 9,
@@ -129,6 +145,7 @@ export const engineers: Engineer[] = [
     projects: 13,
     sectors: ["Industrial", "Commercial"],
     image: "/images/pro/eng9.jpg",
+    hourlyFee: 2100,
   },
   {
     id: 10,
@@ -142,6 +159,7 @@ export const engineers: Engineer[] = [
     projects: 17,
     sectors: ["Residential", "Commercial"],
     image: "/images/pro/eng10.jpg",
+    hourlyFee: 2300,
   },
   {
     id: 11,
