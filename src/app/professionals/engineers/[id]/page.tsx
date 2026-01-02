@@ -40,7 +40,7 @@ export default function EngineerDetailsPage() {
       {/* COVER IMAGE */}
       <div className="relative w-full h-72">
         <Image
-          src="/images/pro/cover.jpg"
+          src="/professionals/pros/cover.png"
           alt="cover"
           fill
           className="object-cover"

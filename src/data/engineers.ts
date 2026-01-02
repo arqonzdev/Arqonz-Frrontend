@@ -28,7 +28,7 @@ export const engineers: Engineer[] = [
     years: 8,
     projects: 10,
     sectors: ["Residential", "Commercial", "Industrial"],
-    image: "/images/pro/eng1.jpg",
+    image: "/professionals/pros/eng1.png",
     designation: "Senior Civil Engineer",
     hourlyFee: 2500,
   },
@@ -43,7 +43,7 @@ export const engineers: Engineer[] = [
     years: 6,
     projects: 12,
     sectors: ["Residential", "Industrial"],
-    image: "/images/pro/eng2.jpg",
+    image: "/professionals/pros/eng1.png",
     designation: "Structural Engineer",
     hourlyFee: 2200,
   },
@@ -58,7 +58,7 @@ export const engineers: Engineer[] = [
     years: 7,
     projects: 15,
     sectors: ["Commercial", "Industrial"],
-    image: "/images/pro/eng3.jpg",
+    image: "/professionals/pros/eng1.png",
     designation: "Project Engineer",
     hourlyFee: 2100,
   },
@@ -73,7 +73,7 @@ export const engineers: Engineer[] = [
     years: 9,
     projects: 18,
     sectors: ["Residential", "Commercial"],
-    image: "/images/pro/eng4.jpg",
+    image: "/professionals/pros/eng1.png",
     designation: "Consultant Engineer",
     hourlyFee: 2600,
   },
@@ -88,7 +88,7 @@ export const engineers: Engineer[] = [
     years: 5,
     projects: 11,
     sectors: ["Industrial", "Commercial"],
-    image: "/images/pro/eng5.jpg",
+    image: "/professionals/pros/eng1.png",
     hourlyFee: 1800,
   },
   {
@@ -102,7 +102,7 @@ export const engineers: Engineer[] = [
     years: 8,
     projects: 16,
     sectors: ["Residential", "Commercial"],
-    image: "/images/pro/eng6.jpg",
+    image: "/professionals/pros/eng1.png",
     hourlyFee: 2400,
   },
   {
@@ -116,7 +116,7 @@ export const engineers: Engineer[] = [
     years: 6,
     projects: 14,
     sectors: ["Commercial", "Industrial"],
-    image: "/images/pro/eng7.jpg",
+    image: "/professionals/pros/eng1.png",
     hourlyFee: 2000,
   },
   {
@@ -130,7 +130,7 @@ export const engineers: Engineer[] = [
     years: 10,
     projects: 20,
     sectors: ["Residential", "Green Buildings"],
-    image: "/images/pro/eng8.jpg",
+    image: "/professionals/pros/eng1.png",
     hourlyFee: 2700,
   },
   {
@@ -144,7 +144,7 @@ export const engineers: Engineer[] = [
     years: 7,
     projects: 13,
     sectors: ["Industrial", "Commercial"],
-    image: "/images/pro/eng9.jpg",
+    image: "/professionals/pros/eng1.png",
     hourlyFee: 2100,
   },
   {
@@ -158,7 +158,7 @@ export const engineers: Engineer[] = [
     years: 8,
     projects: 17,
     sectors: ["Residential", "Commercial"],
-    image: "/images/pro/eng10.jpg",
+    image: "/professionals/pros/eng1.png",
     hourlyFee: 2300,
   },
   {
@@ -172,7 +172,7 @@ export const engineers: Engineer[] = [
     years: 6,
     projects: 12,
     sectors: ["Commercial", "Residential"],
-    image: "/images/pro/eng11.jpg",
+    image: "/professionals/pros/eng1.png",
   },
   {
     id: 12,
@@ -185,6 +185,6 @@ export const engineers: Engineer[] = [
     years: 11,
     projects: 22,
     sectors: ["High-rise", "Commercial", "Luxury Residential"],
-    image: "/images/pro/eng12.jpg",
+    image: "/professionals/pros/eng1.png",
   }
 ];
