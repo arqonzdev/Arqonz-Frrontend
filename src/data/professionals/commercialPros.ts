@@ -8,7 +8,7 @@ export const commercialPros: CommercialPro[] = [
     rating: 4.8,
     reviews: 105,
     hourlyFee: 2499,
-    image: "/images/professionals/c1.jpg",
+    image: "/professionals/pros/c2.png",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const commercialPros: CommercialPro[] = [
     rating: 4.8,
     reviews: 104,
     hourlyFee: 2499,
-    image: "/images/professionals/c2.jpg",
+    image: "/professionals/pros/c2.png",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const commercialPros: CommercialPro[] = [
     rating: 4.8,
     reviews: 101,
     hourlyFee: 2499,
-    image: "/images/professionals/c3.jpg",
+    image: "/professionals/pros/c2.png",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const commercialPros: CommercialPro[] = [
     rating: 4.8,
     reviews: 109,
     hourlyFee: 2499,
-    image: "/images/professionals/c4.jpg",
+    image: "/professionals/pros/c2.png",
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ export const commercialPros: CommercialPro[] = [
     rating: 4.8,
     reviews: 110,
     hourlyFee: 2499,
-    image: "/images/professionals/c5.jpg",
+    image:"/professionals/pros/c2.png",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ export const commercialPros: CommercialPro[] = [
     rating: 4.8,
     reviews: 106,
     hourlyFee: 2499,
-    image: "/images/professionals/c6.jpg",
+    image: "/professionals/pros/c2.png",
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ export const commercialPros: CommercialPro[] = [
     rating: 4.8,
     reviews: 107,
     hourlyFee: 2499,
-    image: "/images/professionals/c7.jpg",
+    image: "/professionals/pros/c2.png",
   },
   {
     id: 8,
@@ -71,6 +71,6 @@ export const commercialPros: CommercialPro[] = [
     rating: 4.8,
     reviews: 108,
     hourlyFee: 2499,
-    image: "/images/professionals/c8.jpg",
+    image: "/professionals/pros/c2.png",
   }
 ];

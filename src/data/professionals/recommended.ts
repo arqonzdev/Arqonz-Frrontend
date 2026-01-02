@@ -19,7 +19,7 @@ export const recommendedSections: RecommendedSection[] = [
         categories: ["Residential", "Commercial", "Renovation", "Plots"],
         rating: 4.8,
         reviewsCount: 10000,
-        image: "/images/professionals/antony1.jpg",
+        image: "/professionals/antony1.png",
         profileUrl: "/professionals/1"
       },
       {
@@ -32,7 +32,7 @@ export const recommendedSections: RecommendedSection[] = [
         categories: ["Residential", "Commercial", "Renovation", "Plots"],
         rating: 4.8,
         reviewsCount: 10000,
-        image: "/images/professionals/antony2.jpg",
+        image: "/professionals/antony1.png",
         profileUrl: "/professionals/2"
       },
       {
@@ -45,7 +45,7 @@ export const recommendedSections: RecommendedSection[] = [
         categories: ["Residential", "Commercial", "Renovation", "Plots"],
         rating: 4.8,
         reviewsCount: 10000,
-        image: "/images/professionals/antony3.jpg",
+        image: "/professionals/antony3.png",
         profileUrl: "/professionals/3"
       }
     ]
@@ -58,8 +58,8 @@ export const recommendedSections: RecommendedSection[] = [
     title: "Designers for you",   
     list: [
        {
-        id: 3,
-        rank: 3,
+        id: 4,
+        rank: 4,
         name: "Antony Jose",
         title: "Professional Interior Architectural Designer",
         completedProjects: 150,
@@ -67,9 +67,36 @@ export const recommendedSections: RecommendedSection[] = [
         categories: ["Residential", "Commercial", "Renovation", "Plots"],
         rating: 4.8,
         reviewsCount: 10000,
-        image: "/images/professionals/antony3.jpg",
+        image: "/professionals/antony3.png",
         profileUrl: "/professionals/3"
-      }
+      },
+      
+      {
+        id: 5,
+        rank: 5,
+        name: "Antony Jose",
+        title: "Professional Interior Architectural Designer",
+        completedProjects: 150,
+        locations: ["Bangalore", "Chennai", "Kerala"],
+        categories: ["Residential", "Commercial", "Renovation", "Plots"],
+        rating: 4.8,
+        reviewsCount: 10000,
+        image: "/professionals/antony1.png",
+        profileUrl: "/professionals/1"
+      },
+      {
+        id: 6,
+        rank: 6,
+        name: "Antony Jose",
+        title: "Professional Interior Architectural Designer",
+        completedProjects: 150,
+        locations: ["Bangalore", "Chennai", "Kerala"],
+        categories: ["Residential", "Commercial", "Renovation", "Plots"],
+        rating: 4.8,
+        reviewsCount: 10000,
+        image: "/professionals/antony1.png",
+        profileUrl: "/professionals/1"
+      },
     ]
   },
 
@@ -80,8 +107,8 @@ export const recommendedSections: RecommendedSection[] = [
     title: "Engineers near You",
     list: [
       {
-        id: 3,
-        rank: 3,
+        id: 7,
+        rank: 7,
         name: "Antony Jose",
         title: "Professional Interior Architectural Designer",
         completedProjects: 150,
@@ -89,8 +116,35 @@ export const recommendedSections: RecommendedSection[] = [
         categories: ["Residential", "Commercial", "Renovation", "Plots"],
         rating: 4.8,
         reviewsCount: 10000,
-        image: "/images/professionals/antony3.jpg",
+        image: "/professionals/antony3.png",
         profileUrl: "/professionals/3"
+      },
+      {
+        id: 8,
+        rank: 8,
+        name: "Antony Jose",
+        title: "Professional Interior Architectural Designer",
+        completedProjects: 150,
+        locations: ["Bangalore", "Chennai", "Kerala"],
+        categories: ["Residential", "Commercial", "Renovation", "Plots"],
+        rating: 4.8,
+        reviewsCount: 10000,
+        image: "/professionals/antony1.png",
+        profileUrl: "/professionals/1"
+      },
+
+      {
+        id: 9,
+        rank: 9,
+        name: "Antony Jose",
+        title: "Professional Interior Architectural Designer",
+        completedProjects: 150,
+        locations: ["Bangalore", "Chennai", "Kerala"],
+        categories: ["Residential", "Commercial", "Renovation", "Plots"],
+        rating: 4.8,
+        reviewsCount: 10000,
+        image: "/professionals/antony1.png",
+        profileUrl: "/professionals/1"
       }
     ]
   }

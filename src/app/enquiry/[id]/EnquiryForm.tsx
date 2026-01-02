@@ -36,7 +36,7 @@ export default function EnquiryForm() {
 
       <div className="relative h-48 rounded-t-xl overflow-hidden">
         <Image
-          src="/images/enquiry-banner.jpg"
+          src="/professionals/pros/cover.png"
           alt="Enquiry Banner"
           fill
           className="object-cover"

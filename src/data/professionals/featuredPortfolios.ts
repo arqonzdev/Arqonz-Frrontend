@@ -7,11 +7,11 @@ export const featuredPortfolios: Portfolio[] = [
     ownerName: "Anuraga",
     city: "Chennai",
     featured: true,
-    profileImage: "/images/portfolios/u1.jpg",
+    profileImage: "/professionals/portfolios/u1.png",
     gallery: [
-      "/images/portfolios/p1a.jpg",
-      "/images/portfolios/p1b.jpg",
-      "/images/portfolios/p1c.jpg"
+      "/professionals/portfolios/p1a.png",
+      "/professionals/portfolios/p1b.png",
+      "/professionals/portfolios/p1c.png"
     ],
     profileLink: "/portfolios/1"
   },
@@ -21,11 +21,11 @@ export const featuredPortfolios: Portfolio[] = [
     ownerName: "Hema",
     city: "Chennai",
     featured: true,
-    profileImage: "/images/portfolios/u2.jpg",
+   profileImage: "/professionals/portfolios/u1.png",
     gallery: [
-      "/images/portfolios/p2a.jpg",
-      "/images/portfolios/p2b.jpg",
-      "/images/portfolios/p2c.jpg"
+      "/professionals/portfolios/p1a.png",
+      "/professionals/portfolios/p1b.png",
+      "/professionals/portfolios/p1c.png"
     ],
     profileLink: "/portfolios/2"
   },
@@ -35,11 +35,11 @@ export const featuredPortfolios: Portfolio[] = [
     ownerName: "Anurag",
     city: "Chennai",
     featured: true,
-    profileImage: "/images/portfolios/u3.jpg",
+     profileImage: "/professionals/portfolios/u1.png",
     gallery: [
-      "/images/portfolios/p3a.jpg",
-      "/images/portfolios/p3b.jpg",
-      "/images/portfolios/p3c.jpg"
+      "/professionals/portfolios/p1a.png",
+      "/professionals/portfolios/p1b.png",
+      "/professionals/portfolios/p1c.png"
     ],
     profileLink: "/portfolios/3"
   }

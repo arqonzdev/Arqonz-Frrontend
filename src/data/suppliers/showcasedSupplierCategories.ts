@@ -6,7 +6,7 @@ export const showcasedSupplierCategories: SupplierCategory[] = [
     title: "Manufacturers",
     description:
       "Creating high-quality construction materials and innovative products trusted by industry professionals",
-    image: "/images/suppliers/manufacturers.jpg",
+    image: "/professionals/suppliers/manufacturers.png",
     link: "/suppliers/manufacturers"
   },
   {
@@ -14,7 +14,7 @@ export const showcasedSupplierCategories: SupplierCategory[] = [
     title: "Distributors",
     description:
       "Deliver top brands and materials to the right professionals, on time and with assurance.",
-    image: "/images/suppliers/distributors.jpg",
+    image: "/professionals/suppliers/distributors.png",
     link: "/suppliers/distributors"
   },
   {
@@ -22,7 +22,7 @@ export const showcasedSupplierCategories: SupplierCategory[] = [
     title: "Dealers",
     description:
       "Bridge the gap between manufacturers, buyers by delivering reliable, affordable solutions.",
-    image: "/images/suppliers/dealers.jpg",
+    image: "/professionals/suppliers/dealers.png",
     link: "/suppliers/dealers"
   },
   {
@@ -30,7 +30,7 @@ export const showcasedSupplierCategories: SupplierCategory[] = [
     title: "Retailers",
     description:
       "Connect customers with a wide range of construction materials and design essentials — all in one place.",
-    image: "/images/suppliers/retailers.jpg",
+    image: "/professionals/suppliers/retailers.png",
     link: "/suppliers/retailers"
   }
 ];

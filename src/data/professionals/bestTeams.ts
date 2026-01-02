@@ -8,7 +8,7 @@ export const bestTeams: Team[] = [
     rating: 4.8,
     reviews: 104,
     hourlyFee: 2499,
-    image: "/images/teams/t1.jpg",
+    image: "/professionals/teams/t1.png",
     profileUrl: "/teams/1"
   },
   {
@@ -18,7 +18,7 @@ export const bestTeams: Team[] = [
     rating: 4.8,
     reviews: 110,
     hourlyFee: 2499,
-    image: "/images/teams/t2.jpg",
+    image: "/professionals/teams/t1.png",
     profileUrl: "/teams/2"
   },
   {
@@ -28,7 +28,7 @@ export const bestTeams: Team[] = [
     rating: 4.8,
     reviews: 115,
     hourlyFee: 2499,
-    image: "/images/teams/t3.jpg",
+    image: "/professionals/teams/t1.png",
     profileUrl: "/teams/3"
   },
   {
@@ -38,7 +38,7 @@ export const bestTeams: Team[] = [
     rating: 4.8,
     reviews: 113,
     hourlyFee: 2499,
-    image: "/images/teams/t4.jpg",
+    image: "/professionals/teams/t1.png",
     profileUrl: "/teams/4"
   },
   {
@@ -48,7 +48,7 @@ export const bestTeams: Team[] = [
     rating: 4.8,
     reviews: 103,
     hourlyFee: 2499,
-    image: "/images/teams/t5.jpg",
+    image: "/professionals/teams/t1.png",
     profileUrl: "/teams/5"
   },
   {
@@ -58,7 +58,7 @@ export const bestTeams: Team[] = [
     rating: 4.8,
     reviews: 120,
     hourlyFee: 2499,
-    image: "/images/teams/t6.jpg",
+    image: "/professionals/teams/t1.png",
     profileUrl: "/teams/6"
   },
   {
@@ -68,7 +68,7 @@ export const bestTeams: Team[] = [
     rating: 4.8,
     reviews: 106,
     hourlyFee: 2499,
-    image: "/images/teams/t7.jpg",
+    image: "/professionals/teams/t1.png",
     profileUrl: "/teams/7"
   },
   {
@@ -78,7 +78,7 @@ export const bestTeams: Team[] = [
     rating: 4.8,
     reviews: 101,
     hourlyFee: 2499,
-    image: "/images/teams/t8.jpg",
+    image: "/professionals/teams/t1.png",
     profileUrl: "/teams/8"
   }
 ];
